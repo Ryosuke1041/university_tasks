@@ -15,11 +15,14 @@ class Kadai04_4
             System.out.print(a + "+" + b + "=?");
             int num = Integer.parseInt(br.readLine());
             sum = a+b;
-            while(sum != num){
-                System.out.print("間違いです。もう一度入力");
-                int num = Integer.parseInt(br.readLine());
+            if(sum != num){
+                do{
+                    System.out.print("間違いです。もう一度入力");
+                    num = Integer.parseInt(br.readLine());
+                }while(sum != num);
             }
-            System.out.print("正解!!");
+            System.out.println("正解!!");
+            
 
         }
         long end = System.currentTimeMillis();
