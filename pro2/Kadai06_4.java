@@ -16,13 +16,18 @@ class Kadai06_4
             char[] hoka;
             while ((str = br_f.readLine()) != null) {
                 System.out.println(str);
-                if(Character.isLowerCase(str) == true){
-                    syou = str; 
-                }else if(Character.isLowerCase(str) == false){
-                    dai = str;
-                }else{
-                    hoka = str;
-                }
+                for(int i = 0; i < str.length(); i++) {
+                    System.out.println(str.charAt(i));
+                    char c = str.charAt(i);
+                    if(Character.isLowerCase(c) == true){
+                        syou = str; 
+                    }else if(Character.isUpperCase(c) == true){
+                        dai = str;
+                    }else{
+                        hoka = str;
+                    }
+                } 
+                
             } 
             br_f.close();
             System.out.println(str.length + "行ありました");
