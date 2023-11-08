@@ -14,8 +14,8 @@ class Kadai06_4
             int syou = 0;
             int dai = 0;
             int hoka = 0;
+            int sum = 0;
             while ((str = br_f.readLine()) != null) {
-                System.out.println(str);
                 for(int i = 0; i < str.length(); i++) {
                     System.out.println(str.charAt(i));
                     char c = str.charAt(i);
@@ -26,10 +26,11 @@ class Kadai06_4
                     }else{
                         hoka += 1;
                     }
-                } 
+                }
+                sum += 1;
             } 
             br_f.close();
-            System.out.println(str.length + "行ありました");
+            System.out.println(sum + "行ありました");
             System.out.println("小文字 :" + syou);
             System.out.println("大文字 :" + dai);
             System.out.println("その他 :" + hoka);
