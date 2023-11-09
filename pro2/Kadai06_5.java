@@ -56,7 +56,7 @@ class Kadai06_5
             System.out.print(i+1 + "枚目は何番のカードを交換しますか？");
             changed_num = Integer.parseInt(br.readLine());
             for(int k = 0; k < 5; k++){
-                if(k == changed_num){
+                if(k == changed_num - 1){
                     mark = (int)(Math.random()*4); // 0:スペード 1:ハート 2:ダイヤ 3:クラブ
                     num = (int)(Math.random()*13);
                     tefuda_m[k]=mark;
