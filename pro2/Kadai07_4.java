@@ -29,7 +29,7 @@ class Figure_1{
 
 class Kadai07_4
 { 
-	public static void main(String[] args) throws IOException {	
+	public static void main(String[] args){	
         int[] f_major:{ 80, 50, 30}, f_minor:{ 60, 50, 40}; 
         //int[] f_major:{ 80, 50, 30, 60}, f_minor:{ 60, 50, 40, 60};
         Figure_1 fig = new Figure_1();
