@@ -7,7 +7,7 @@ class Figure_1{
     String type;
 
     public void setLength(){
-        System.out.printf("長径\t" + major + " 、");
+        System.out.printf("\t長径\t" + major + " 、");
         System.out.printf("短径\t" + minor);
         System.out.println(" に設定しました。");
         getArea();
@@ -30,8 +30,8 @@ class Figure_1{
 class Kadai07_4
 { 
 	public static void main(String[] args){	
-        int[] f_major:{ 80, 50, 30}, f_minor:{ 60, 50, 40}; 
-        //int[] f_major:{ 80, 50, 30, 60}, f_minor:{ 60, 50, 40, 60};
+        int[] f_major = { 80, 50, 30}, f_minor = { 60, 50, 40}; 
+        //int[] f_major = { 80, 50, 30, 60}, f_minor = { 60, 50, 40, 60};
         Figure_1 fig = new Figure_1();
 
         double[] f_area = new double[f_major.length];
@@ -40,6 +40,7 @@ class Kadai07_4
         for(int i = 0; i < f_major.length; i++){
             fig.major = f_major[i];
             fig.minor = f_minor[i];
+            System.out.println(i+1 + "つ目の図形は、")
             fig.setLength();
             f_area[i] = fig.area;
             f_type[i] = fig.type;
