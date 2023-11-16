@@ -40,7 +40,7 @@ class Kadai07_4
         for(int i = 0; i < f_major.length; i++){
             fig.major = f_major[i];
             fig.minor = f_minor[i];
-            System.out.println(i+1 + "つ目の図形は、")
+            System.out.println(i+1 + "つ目の図形は、");
             fig.setLength();
             f_area[i] = fig.area;
             f_type[i] = fig.type;
