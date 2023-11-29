@@ -36,21 +36,21 @@ class Score
 		else return 1;
 	}
 
-	public int getTotal(int gT)
+	public int getTotal(int n)
 	{
-		if(s3 == null){
+		if(n == 2){
 			total = s1 + s2;		
-		}else{
+		}else if(n == 3){
 			total = s1 + s2 + s3;		
 		}
 		return total;
 	}
 
-	public double getAverage(int gA)
+	public double getAverage(int n)
 	{
-		if(s3 == null){
+		if(n == 2){
 			average = (double)total / 2;		
-		}else{
+		}else if(n == 3){
 			average = (double)total / 3;
 		}
 		return average;
@@ -66,19 +66,18 @@ class Kadai09_3
 		
 		//subject.setScore_3( -75, 182);					//コメントにする
 		subject.setScore_3( -75, 182);  n=2;		//コメントを外す
-		System.out.printf("　　合計点：%6d 点　　平均点：%6.2f 点\n", subject.getTotal(), subject.getAverage());
+		System.out.printf("　　合計点：%6d 点　　平均点：%6.2f 点\n", subject.getTotal(n), subject.getAverage(n));
 		
 		//subject.setScore_3( -75, 82);						//コメントにする
 		subject.setScore_3( 75, 82);  n=2;		//コメントを外す
-		System.out.printf("　　合計点：%6d 点　　平均点：%6.2f 点\n", subject.getTotal(), subject.getAverage());
+		System.out.printf("　　合計点：%6d 点　　平均点：%6.2f 点\n", subject.getTotal(n), subject.getAverage(n));
 		
 		//subject.setScore_3( 75, 182);						//コメントにする
 		subject.setScore_3( 75, 182, -87);  n=3;		//コメントを外す
-		System.out.printf("　　合計点：%6d 点　　平均点：%6.2f 点\n", subject.getTotal(), subject.getAverage());
+		System.out.printf("　　合計点：%6d 点　　平均点：%6.2f 点\n", subject.getTotal(n), subject.getAverage(n));
 		
 		//subject.setScore_3( 75, 82);					//コメントにする
 		subject.setScore_3( 75, 82, 87);  n=3;		//コメントを外す
-		System.out.printf("　　合計点：%6d 点　　平均点：%6.2f 点\n", subject.getTotal(), subject.getAverage());
+		System.out.printf("　　合計点：%6d 点　　平均点：%6.2f 点\n", subject.getTotal(n), subject.getAverage(n));
 	}
 }
-
