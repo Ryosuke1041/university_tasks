@@ -34,7 +34,7 @@ class Figure_3
 
 	public int setLength(int w, int h, int d)
 	{
-		if( this.setLength(w) == 0  && h >= 0 && d >= 0){
+		if( this.setLength(w, h) == 0 && d >= 0){
 			depth = (double)d;
 			return 0;
 		}
@@ -71,7 +71,7 @@ class Kadai09_4
 				System.out.printf("面積は%.2fです。",fig.getArea());
 			}
 			System.out.printf("\n %2dつ目の図形の体積を求めます。\n", i+1);
-			if(fig.setLength(w[i], h[i]) == 0 && fig.setLength(w[i], h[i], d[i]) == 0){
+			if(fig.setLength(w[i], h[i], d[i]) == 0){
 				System.out.printf("体積は%.2fです。",fig.getVolume());
 			}//不足箇所を追加しなさい
 			System.out.printf("\n");
