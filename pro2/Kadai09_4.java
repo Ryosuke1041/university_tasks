@@ -22,6 +22,7 @@ class Figure_3
 	}
 	public int setLength(int w, int h)
 	{
+		System.out.printf("aaaaa");
 		if( this.setLength(w) == 0  && h >= 0 ){
 			height = (double)h;
 			return 0;
@@ -39,7 +40,7 @@ class Figure_3
 			return 0;
 		}
 		else{
-			if( d < 0) System.out.printf("*** 奥行 " +d+ " が不適切なので設定できませんでした。 ***");
+			if( d < 0) System.out.printf("*** 奥行 " +d+ "  が不適切なので設定できませんでした。 ***");
 			return 1;
 		}
 	}		//不足しているコードを追加しなさい
