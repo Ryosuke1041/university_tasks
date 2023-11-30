@@ -1,5 +1,4 @@
-//課題４．（１０点）
-//課題４のサンプルプログラム
+
 
 class Figure_3
 {
@@ -11,6 +10,7 @@ class Figure_3
 
 	public int setLength(int w)
 	{
+		System.out.printf("1");
 		if( w >= 0 ){
 			width = (double)w;
 			return 0;
@@ -22,7 +22,7 @@ class Figure_3
 	}
 	public int setLength(int w, int h)
 	{
-		System.out.printf("aaaaa");
+		System.out.printf("2");
 		if( this.setLength(w) == 0  && h >= 0 ){
 			height = (double)h;
 			return 0;
@@ -35,6 +35,7 @@ class Figure_3
 
 	public int setLength(int w, int h, int d)
 	{
+		System.out.printf("3");
 		if( this.setLength(w) == 0  && h >= 0 && d >= 0){
 			depth = (double)d;
 			return 0;
