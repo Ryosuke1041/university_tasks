@@ -19,7 +19,7 @@ class Kakeibo_1
         if(inco >= 0 && expe >= 0){
             income = inco;
             expenses = expe;
-            savings += savings + income - expenses;
+            savings += income - expenses;
         }else{
             System.out.println(" ***** エラー：入力した金額は無効です。 *****");
         }
