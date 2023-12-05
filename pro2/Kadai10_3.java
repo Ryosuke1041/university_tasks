@@ -1,4 +1,4 @@
-// 学籍番号：22H062，氏名：中江亮介，課題番号：Kadai09_3
+// 学籍番号：22H062，氏名：中江亮介，課題番号：Kadai10_3
 
 class Kakeibo_1
 {
@@ -20,6 +20,7 @@ class Kakeibo_1
             income = inco;
             expenses = expe;
             savings += income - expenses;
+            System.out.println("＜正常に入出金処理出来ました＞");
         }else{
             System.out.println(" ***** エラー：入力した金額は無効です。 *****");
         }
