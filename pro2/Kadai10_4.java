@@ -5,7 +5,7 @@ class Score_4
 {
 	private int s1, s2, s3, total;
     private static int n1, n2, total_s1, total_s2;
-	private double average;
+	private static double average;
 
     public Score_4()
 	{
@@ -40,7 +40,7 @@ class Score_4
 		else return 1;
 	}
 
-    public double getAve_sn(int gA){
+    public static double getAve_sn(int gA){
         if(gA == 1){
             average = (double)total_s1 / (double)n2;
         }else if(gA == 2){
@@ -91,9 +91,9 @@ class Kadai10_4
         System.out.printf("\n"); 
 
         //Score_4 ave1 = new Score_4();//ここに科目１の平均値と科目２の平均値をクラスメソッドの戻り値として取得し表示させるコードを追加しなさい。
-        System.out.printf("科目１の平均点：%6.2f 点", sub4.getAve_sn(1));
+        System.out.printf("科目１の平均点：%6.2f 点", Score_4.getAve_sn(1));
         
         //Score_4 ave2 = new Score_4();//ここに科目１の平均値と科目２の平均値をクラスメソッドの戻り値として取得し表示させるコードを追加しなさい。
-        System.out.printf("科目２の平均点：%6.2f 点", sub4.getAve_sn(2)); 
+        System.out.printf("科目２の平均点：%6.2f 点", Score_4.getAve_sn(2)); 
     }
 }
