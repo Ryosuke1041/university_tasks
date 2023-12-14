@@ -13,7 +13,8 @@ class Kadai11_3
         String str2 = br.readLine();
         //StringBuffer sb = str2.length();
         int pos = str1.lastIndexOf(str2.length());
-        StringBuffer sb = str1.substring(0, pos-1);
+        StringBuffer sb = new StringBuffer(str1);
+        sb = str1.substring(0, pos-1);
         sb.append(str2.toUpperCase);
 
         System.out.print(sb);
