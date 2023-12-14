@@ -6,13 +6,13 @@ class Kadai11_4
 {
     public static void main(String args[]) throws IOException{
         double length = (Math.random() * 5) + 1;
-        System.out.print(length);
+        System.out.println("ひし形の辺の長さ：" + length);
+        
+        int deg = (int)Math.rint((Math.random() * 90) + 1);
+        System.out.println("内角の 1 つ：" + deg + "度");
 
-        int deg = Math.rint((Math.random() * 90) + 1);
-        System.out.print(deg);
+        double S = Math.pow(length, 2) * Math.sin(Math.toRadians(deg));
 
-        double S = Math.pow(length) * Math.sin(deg);
-
-        System.out.print(S);
+        System.out.print("面積:" + S);
     }
 }
