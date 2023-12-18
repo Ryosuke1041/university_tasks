@@ -20,7 +20,7 @@ class Human{
 	}
 }
 
-class Kadai12_1
+class Kadai12_2
 {
     public static void main(String[] args){
 		Human[] member;
