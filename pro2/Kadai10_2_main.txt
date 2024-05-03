@@ -1,0 +1,32 @@
+//課題２．（１０点）
+//課題２のメインプログラム  数値の設定は引数を持つコンストラクタで行う
+
+
+
+class Kadai10_2
+{
+	public static void main(String args[])
+	{
+		System.out.println("\n購入明細：鉛筆");
+								//オブジェクト pencil_1 の値( -44, 55)を設定
+		pencil_1.show();
+		System.out.println("\n購入明細：鉛筆");
+								//オブジェクト pencil_2 の値(  44, 55)を設定
+		pencil_2.show();
+		
+		System.out.println("\n購入明細：消しゴム");
+								//オブジェクト eraser_1 の値( 2066, 777)を設定
+		eraser_1.show();
+		System.out.println("\n購入明細：消しゴム");
+								//オブジェクト eraser_2 の値( 66, 77)を設定
+		eraser_2.show();
+		
+		System.out.println("\n購入明細：ノート");
+								//オブジェクト notebook_1 の値( 88, 9)を設定
+		notebook_1.show();
+		System.out.println("\n購入明細：ノート");
+								//オブジェクト notebook_2 の値( 88, 99)を設定
+		notebook_2.show();
+		System.out.printf("\n");
+	}
+}

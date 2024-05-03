@@ -1,0 +1,28 @@
+//課題１．（１０点）
+//課題１のメインプログラム
+
+
+
+class Kadai10_1
+{
+	public static void main(String[] args)
+	{
+		System.out.printf("\n学生:student1\n");
+		Measurement_4 student1 = new Measurement_4( "Kishida", 222,  170.2,  50.2, 80.2);	student1.show();
+		System.out.printf("\n学生:student2\n");
+		Measurement_4 student2 = new Measurement_4( "Kishida",  22,  170.2,  50.2, 80.2);	student2.show();
+		System.out.printf("\n学生:student3\n");
+		Measurement_4 student3 = new Measurement_4( "Matsuno",  19, 1173.3, -63.2, 93.3);	student3.show();
+		System.out.printf("\n学生:student4\n");
+		Measurement_4 student4 = new Measurement_4( "Matsuno",  19,  173.3,  63.2, 93.3);	student4.show();
+		System.out.printf("\n学生:student5\n");
+		Measurement_4 student5 = new Measurement_4(  "Suzuki", -20, -161.1,  71.1, 51.1);	student5.show();
+		System.out.printf("\n学生:student6\n");
+		Measurement_4 student6 = new Measurement_4(  "Suzuki",  20,  161.1,  71.1, 51.1);	student6.show();
+		
+		//ここに処理した人数、年齢の平均値とＢＭＩの平均値を表示するクラスメソッドを追加しなさい。											//③
+	}
+}
+
+
+

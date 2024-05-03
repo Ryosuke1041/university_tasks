@@ -1,0 +1,28 @@
+//課題４．（１０点）
+//課題４のメインプログラム
+
+
+
+class Kadai10_4
+{
+	public static void main(String[] args)
+	{
+		int n;
+		
+		Score_4 sub1 = new Score_4( -88, 77);  n=2;
+		System.out.printf("　　合計点：%6d 点　　平均点：%6.2f 点\n", sub1.getTotal(n), sub1.getAverage(n));
+		
+		Score_4 sub2 = new Score_4( 88, 77);  n=2;
+		System.out.printf("　　合計点：%6d 点　　平均点：%6.2f 点\n", sub2.getTotal(n), sub2.getAverage(n));
+		
+		Score_4 sub3 = new Score_4( 75, 182);  n=2;
+		System.out.printf("　　合計点：%6d 点　　平均点：%6.2f 点\n", sub3.getTotal(n), sub3.getAverage(n));
+		
+		Score_4 sub4 = new Score_4( 75, 82);  n=2;
+		System.out.printf("　　合計点：%6d 点　　平均点：%6.2f 点\n", sub4.getTotal(n), sub4.getAverage(n));
+		
+		System.out.printf("\n");
+		//ここに科目１の平均値と科目２の平均値をクラスメソッドの戻り値として取得し表示させるコードを追加しなさい。
+		
+	}
+}
