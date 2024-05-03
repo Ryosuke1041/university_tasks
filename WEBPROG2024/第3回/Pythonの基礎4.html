@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0131)https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pythonの基礎4</title>
+        
+        <script type="text/javascript" src="./Pythonの基礎4_files/jquery.min.js.ダウンロード"></script>
+        <style>
+        body { font:100% Verdana,Tahoma,Arial,sans-serif; }
+        pre { margin-left:30px; font-size: large; padding: 1em; background-color: #fff;
+         border: 1px solid #ccc; overflow: auto; white-space: pre-wrap; word-wrap: break-word; font-family: Courier, monospace;}
+        code {font-size: large; font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
+        h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",san-serif; }
+        
+        table,th,td {border: 1px solid #ccc;}
+        ul.toc { padding: 4px; margin-left: 0; }
+        ul.toc li { list-style-type:none; }
+        ul.toc li.heading2 { margin-left: 1em; }
+        ul.toc li.heading3 { margin-left: 2em; }
+        a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+        a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+        h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+        </style>
+        </head>
+<body>
+<a name="Pythonの基礎4"></a>
+<h1>Pythonの基礎4<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Python%E3%81%AE%E5%9F%BA%E7%A4%8E4" class="wiki-anchor">¶</a></h1>
+<ul class="toc right"><li><strong>目次</strong></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Python%E3%81%AE%E5%9F%BA%E7%A4%8E4">Pythonの基礎4</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#%E9%96%A2%E6%95%B0">関数</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_1py">Sample4_1.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_2py">Sample4_2.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_3py">Sample4_3.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_4py">Sample4_4.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_5py">Sample4_5.py</a></li></ul>
+</li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%81%AE%E5%BE%A9%E7%BF%92">オブジェクト指向の復習</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%A8%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9">クラスとインスタンス</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_6py">Sample4_6.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_7py">Sample4_7.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_8py">Sample4_8.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_9py">Sample4_9.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_10py">Sample4_10.py</a></li></ul>
+</li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%A8%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8-%E5%BE%8C%E7%B7%A8">モジュールとパッケージ 後編</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#%E5%8D%98%E4%B8%80%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%A8%E5%88%A9%E7%94%A8">単一ファイルのモジュールの作成と利用</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#myprog1py">myprog1.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_1apy">Sample4_1a.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#myprog1apy">myprog1a.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_10apy">Sample4_10a.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#myprog2py">myprog2.py</a></li></ul>
+</li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%A8%E5%88%A9%E7%94%A8">パッケージの作成と利用</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#pack1__init__py">pack1/__init__.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#pack1module1py">pack1/module1.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#pack1module2py">pack1/module2.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#myprog3py">myprog3.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#__init__py">__init.__.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#myprog4py">myprog4.py</a></li></ul></li></ul></li></ul></li></ul>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-0dc71598-show, #collapse-0dc71598-hide&#39;).toggle(); $(&#39;#collapse-0dc71598&#39;).fadeToggle(150);; return false;" id="collapse-0dc71598-show" class="icon icon-collapsed collapsible">前回の復習</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-0dc71598-show, #collapse-0dc71598-hide&#39;).toggle(); $(&#39;#collapse-0dc71598&#39;).fadeToggle(150);; return false;" id="collapse-0dc71598-hide" class="icon icon-expanded collapsible" style="display:none;">前回の復習</a></p><div id="collapse-0dc71598" class="collapsed-text" style="display:none;"><ul>
+<li>リスト</li>
+<li>タプル</li>
+<li>レンジ</li>
+<li>辞書</li>
+</ul></div><p></p>
+<a name="関数"></a>
+<h2>関数<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#%E9%96%A2%E6%95%B0" class="wiki-anchor">¶</a></h2>
+<p>これまでに出てきたinput関数やprint関数などは、Pythonに最初から組み込まれている「組み込み関数」である。Pythonでは多くの組み込み関数が標準で用意されていて、すぐに利用できる。これ以外にも、すでに出てきたように、モジュールという形で組み込まれているものは、importで指定することで利用できるようになる。詳細は <a href="https://docs.python.org/ja/3/" class="external">Python公式サイトのドキュメント</a>を参照のこと。</p>
+<p>Pythonで関数を作成するには、defを使って定義する。関数の中身はインデントして記述する。引数は (  ) (丸括弧) の中にカンマで区切って並べる。引数や戻り値のデータ型は指定する必要はない。</p>
+<p>まずは引数/戻り値なしの関数の定義と実行をインタラクティブモードで試してみる。インタラクティブモードで関数の定義を入力する場合、関数の定義記述中は ... の表示となるので、同じインデントの深さで入力していき、最後にエンターキーのみを押してプロンプトを出す(&gt;&gt;&gt;)。その後、この関数の呼び出しなどのメインの処理を入力する。</p>
+<pre><code>&gt;&gt;&gt; def sayHello():
+...     print('Hello')
+...     print('Goodbye')
+... 
+&gt;&gt;&gt; sayHello()
+Hello
+Goodbye
+&gt;&gt;&gt; 
+</code></pre>
+<a name="Sample4_1py"></a>
+<h3>Sample4_1.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_1py" class="wiki-anchor">¶</a></h3>
+<p>この例では、show関数を定義した後、最後の行でこのshow関数を呼び出している。この関数は引数を2つ持ち、戻り値はない。また、f-文字列を使って変数の値を埋め込んでいる。</p>
+<pre><code>def show(arg1, arg2):
+    print(f'最初の引数は {arg1}で、2番目の引数は {arg2} です。')
+
+show(10,12)                        # 関数の呼び出し
+</code></pre>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-4c80d44a-show, #collapse-4c80d44a-hide&#39;).toggle(); $(&#39;#collapse-4c80d44a&#39;).fadeToggle(150);; return false;" id="collapse-4c80d44a-show" class="icon icon-collapsed collapsible">実行結果</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-4c80d44a-show, #collapse-4c80d44a-hide&#39;).toggle(); $(&#39;#collapse-4c80d44a&#39;).fadeToggle(150);; return false;" id="collapse-4c80d44a-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果</a></p><div id="collapse-4c80d44a" class="collapsed-text" style="display:none;"><pre><code>最初の引数は 10で、2番目の引数は 12 です。
+</code></pre></div><p></p>
+<a name="Sample4_2py"></a>
+<h3>Sample4_2.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_2py" class="wiki-anchor">¶</a></h3>
+<p>戻り値は他の言語と同じようにreturnを使う。</p>
+<pre><code>def add(arg1, arg2):
+    result = arg1 + arg2
+    return result
+
+t = add(3, 5)
+print(t)
+</code></pre>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-4b799963-show, #collapse-4b799963-hide&#39;).toggle(); $(&#39;#collapse-4b799963&#39;).fadeToggle(150);; return false;" id="collapse-4b799963-show" class="icon icon-collapsed collapsible">実行結果</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-4b799963-show, #collapse-4b799963-hide&#39;).toggle(); $(&#39;#collapse-4b799963&#39;).fadeToggle(150);; return false;" id="collapse-4b799963-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果</a></p><div id="collapse-4b799963" class="collapsed-text" style="display:none;"><pre><code>8
+</code></pre></div><br>
+変数 resultを使わずに returnの後に直接 式を書いて、<p></p>
+<pre><code>def add(arg1, arg2):
+    return arg1 + arg2
+</code></pre>
+<p>でもよい。</p>
+<a name="Sample4_3py"></a>
+<h3>Sample4_3.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_3py" class="wiki-anchor">¶</a></h3>
+<p>関数の戻り値は基本的には１つだが、タプルやリストを返す関数にすると、複数の戻り値を返すことができる。特にタプルはかっこを省略できるので、複数の値を返す関数をより自然に記述できる。例えば次の例は、引数で与えた整数の割算の商と余りをタプルで返す関数である。関数呼び出し部分(下から2行目)の左辺はかっこを省略したタプルだが、タプルとして返された値がそれぞれaとbという変数に分かれて同時に代入されているので、<strong>アンパック</strong>代入と呼ばれる。この時、左辺と右辺の要素数は一致していないとエラーとなる。</p>
+<pre><code>def newdiv(x, y):
+    return x//y, x%y
+
+a, b = newdiv(5 ,2)
+print(f'商: {a}, 余り: {b}')
+</code></pre>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-0d5baccd-show, #collapse-0d5baccd-hide&#39;).toggle(); $(&#39;#collapse-0d5baccd&#39;).fadeToggle(150);; return false;" id="collapse-0d5baccd-show" class="icon icon-collapsed collapsible">実行結果</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-0d5baccd-show, #collapse-0d5baccd-hide&#39;).toggle(); $(&#39;#collapse-0d5baccd&#39;).fadeToggle(150);; return false;" id="collapse-0d5baccd-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果</a></p><div id="collapse-0d5baccd" class="collapsed-text" style="display:none;"><pre><code>商: 2, 余り: 1
+</code></pre></div><p></p>
+<a name="Sample4_4py"></a>
+<h3>Sample4_4.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_4py" class="wiki-anchor">¶</a></h3>
+<p><strong>デフォルト引数</strong>を使うと、引数を省略した場合にあらかじめ設定した値を使うことができる。下の例では、最初のprint関数の第2引数を省略しているので、0.1が利用される。注意点としては、デフォルト値のない引数と混在する場合は、関数の定義でデフォルト引数を通常の引数の後にすること。先にデフォルト引数を持ってくるとエラーになる。</p>
+<pre><code>def taxcalc(price, rate=0.1):        # ここで def taxcalc(rate=0.1, price):  だとエラー
+	return price * (1 + rate)
+	
+print(taxcalc(100.0))
+print(taxcalc(100.0,0.08))
+</code></pre>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-075ed630-show, #collapse-075ed630-hide&#39;).toggle(); $(&#39;#collapse-075ed630&#39;).fadeToggle(150);; return false;" id="collapse-075ed630-show" class="icon icon-collapsed collapsible">実行結果</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-075ed630-show, #collapse-075ed630-hide&#39;).toggle(); $(&#39;#collapse-075ed630&#39;).fadeToggle(150);; return false;" id="collapse-075ed630-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果</a></p><div id="collapse-075ed630" class="collapsed-text" style="display:none;"><pre><code>110.00000000000001
+108.0
+</code></pre></div><p></p>
+<p>また、Pythonの関数では、関数を呼び出す時に <strong>仮引数の変数名 = 値(実引数)</strong> という使い方もできる。これを<strong>キーワード引数</strong>という。例えば上の Sample4_4.pyのprintの部分は、</p>
+<pre><code>print(taxcalc(price=100.0))
+print(taxcalc(price=100.0,rate=0.08))
+</code></pre>
+<p>にすることもできる。また、このキーワード引数を使うことで、引数の順番を変えて、</p>
+<pre><code>print(taxcalc(rate=0.08,price=100.0))
+</code></pre>
+<p>とすることも可能になる。</p>
+<a name="Sample4_5py"></a>
+<h3>Sample4_5.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_5py" class="wiki-anchor">¶</a></h3>
+<p>関数の引数の変数名の前に<code>*</code>または<code>**</code>をつけると、可変長の引数にすることができる。<code>*</code>の可変長引数は関数内ではタプルとして扱われ、<code>**</code>の可変長引数は辞書として扱われる。通常の変数の引数と混在させる場合は、最後に可変長引数を置くか、<code>*</code>の場合は通常の変数をキーワード引数で指定する必要がある。辞書の場合は可変長引数は必ず最後におく必要がある。</p>
+<pre><code>def varprint(*args):
+    print(args)
+
+def dicprint(**dic):
+    print(dic)
+
+varprint(1)
+varprint(1,2,3,4)
+
+dicprint(算数=100, 英語=80)
+dicprint(物理=60)
+</code></pre>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-dcdf4790-show, #collapse-dcdf4790-hide&#39;).toggle(); $(&#39;#collapse-dcdf4790&#39;).fadeToggle(150);; return false;" id="collapse-dcdf4790-show" class="icon icon-collapsed collapsible">実行結果</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-dcdf4790-show, #collapse-dcdf4790-hide&#39;).toggle(); $(&#39;#collapse-dcdf4790&#39;).fadeToggle(150);; return false;" id="collapse-dcdf4790-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果</a></p><div id="collapse-dcdf4790" class="collapsed-text" style="display:none;"><p>例ではタプルや辞書を丸ごと表示したが、インデックスやキーを指定して各要素の値を取り出すこともできる。</p>
+<pre><code>(1,)
+(1, 2, 3, 4)
+{'算数': 100, '英語': 80}
+{'物理': 60}
+</code></pre></div><p></p>
+<a name="オブジェクト指向の復習"></a>
+<h2>オブジェクト指向の復習<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%81%AE%E5%BE%A9%E7%BF%92" class="wiki-anchor">¶</a></h2>
+<p>最近のプログラミング言語では、プログラミングパラダイム(プログラムの方法論)として、オブジェクト指向プログラミングをサポートする言語が一般的である。Pythonでも、クラスを作成してオブジェクト指向プログラミングができる。</p>
+<a name="クラスとインスタンス"></a>
+<h3>クラスとインスタンス<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%A8%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9" class="wiki-anchor">¶</a></h3>
+<p><img src="./Pythonの基礎4_files/clipboard-202010212239-vh804.png" width="90%" alt=""></p>
+<ul>
+<li>オブジェクト指向における「オブジェクト」とはデータ(変数)とそれを処理するメソッド(関数)を1つにまとめたもの</li>
+<li>オブジェクトとは モノ であり、性質(変数)と 機能(メソッド)をもっている</li>
+<li>オブジェクト指向プログラミングでは、オブジェクト間の相互作用を記述してプログラムを作成していく</li>
+<li>クラス:  オブジェクトのひな形 (設計図)</li>
+<li>設計図に基づいてコンピュータのメモリー上に作られたオブジェクトをインスタンスとも呼ぶ</li>
+<li>オブジェクト(インスタンス)内の変数をインスタンス変数、メソッドをインスタンスメソッドと呼ぶ</li>
+<li>obj2からobj1のメソッド1を呼び出す → 「obj2からobj1に(メソッド1という)メッセージを送る」と表現することもある</li>
+<li>継承 (インヘリタンス)によって、すでにあるクラスを拡張したクラスを簡単に作成できる</li>
+</ul>
+<a name="Sample4_6py"></a>
+<h3>Sample4_6.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_6py" class="wiki-anchor">¶</a></h3>
+<p>Pythonではクラス中のメソッド定義の1番目の仮引数には、そのインスタンス自身を渡す変数の指定が必要(selfが慣習的に使われる)。呼び出し時(最後の行) にはこの引数は必要ない。</p>
+<pre><code>class Dog:
+    def bark(self):   # メソッドの定義 
+        print('わんわん')  
+
+a = Dog()
+a.bark()
+</code></pre>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-a0ca861e-show, #collapse-a0ca861e-hide&#39;).toggle(); $(&#39;#collapse-a0ca861e&#39;).fadeToggle(150);; return false;" id="collapse-a0ca861e-show" class="icon icon-collapsed collapsible">実行結果</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-a0ca861e-show, #collapse-a0ca861e-hide&#39;).toggle(); $(&#39;#collapse-a0ca861e&#39;).fadeToggle(150);; return false;" id="collapse-a0ca861e-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果</a></p><div id="collapse-a0ca861e" class="collapsed-text" style="display:none;"><pre><code>わんわん
+</code></pre></div><p></p>
+<a name="Sample4_7py"></a>
+<h3>Sample4_7.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_7py" class="wiki-anchor">¶</a></h3>
+<p>イニシャライザを使うと、インスタンス生成時に<code>クラス名(引数)</code>という形で引数として値を渡すことができる。以下の <code>__init__</code>関数がイニシャライザである。インスタンス変数は(第一引数をselfにした場合)、 self.name のように self.をつけてあらわす。この場合、実際に渡される引数は nameである。3行目で引数nameの値がインスタンス変数のnameに代入されている。</p>
+<pre><code>class Dog:
+    def __init__(self, name):
+        self.name = name
+  
+    def bark(self):   # メソッドの定義 
+        print(f'{self.name}: わんわん')
+
+a = Dog('シロ')
+a.bark()
+
+b = Dog('ポチ')
+b.bark()
+</code></pre>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-2f6eab47-show, #collapse-2f6eab47-hide&#39;).toggle(); $(&#39;#collapse-2f6eab47&#39;).fadeToggle(150);; return false;" id="collapse-2f6eab47-show" class="icon icon-collapsed collapsible">実行結果</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-2f6eab47-show, #collapse-2f6eab47-hide&#39;).toggle(); $(&#39;#collapse-2f6eab47&#39;).fadeToggle(150);; return false;" id="collapse-2f6eab47-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果</a></p><div id="collapse-2f6eab47" class="collapsed-text" style="display:none;"><pre><code>シロ: わんわん
+ポチ: わんわん
+</code></pre></div><p></p>
+<a name="Sample4_8py"></a>
+<h3>Sample4_8.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_8py" class="wiki-anchor">¶</a></h3>
+<p>継承は以下のようにして記述する。Dogクラスを継承する盲導犬クラス(GuideDog)を作成するとする。GuideDogクラスの定義の1行目のように、継承元(スーパークラス)のDogを()の中に記述する。GuideDogクラスの定義では、このクラス独自の機能 (stopAtCurb(), avoidObstacle()メソッド)しか記述していないが、継承することによって、このクラス内にコピーしなくてもDogクラスのインスタンス変数やインスタンスメソッドを利用できる。</p>
+<pre><code>class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):   # メソッドの定義 
+        print(f'{self.name}: わんわん')
+
+class GuideDog(Dog):
+    def stopAtCurb(self):
+        print(f'{self.name}: 歩道の端で止まります')
+
+    def avoidObstacle(self):
+        print(f'{self.name}: 障害物をよけます')
+
+a = Dog('シロ')      # Dogクラスのインスタンス その1
+a.bark()             
+
+b = Dog('ポチ')      # Dogクラスのインスタンス その2
+b.bark()
+
+c = GuideDog('タロ') # GuideDogクラスのインスタンス
+c.bark()             # Dogクラスの bark()メソッドが使える
+c.stopAtCurb()       # GuideDogクラス独自のメソッド
+</code></pre>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-ba0e162f-show, #collapse-ba0e162f-hide&#39;).toggle(); $(&#39;#collapse-ba0e162f&#39;).fadeToggle(150);; return false;" id="collapse-ba0e162f-show" class="icon icon-collapsed collapsible">実行結果</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-ba0e162f-show, #collapse-ba0e162f-hide&#39;).toggle(); $(&#39;#collapse-ba0e162f&#39;).fadeToggle(150);; return false;" id="collapse-ba0e162f-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果</a></p><div id="collapse-ba0e162f" class="collapsed-text" style="display:none;"><pre><code>シロ: わんわん
+ポチ: わんわん
+タロ: わんわん
+タロ: 歩道の端で止まります
+</code></pre></div><p></p>
+<a name="Sample4_9py"></a>
+<h3>Sample4_9.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_9py" class="wiki-anchor">¶</a></h3>
+<p>アクセス制御は、オブジェクト指向をサポートする言語でよく使われる機能だが、Pythonではキーワード(修飾子)としては存在しない。外部から直接アクセスできないようにする(プライベート) には、 変数名やメソッド名の先頭に<code>__</code> (アンダーバー２つ)をつける。例えば以下のプログラムは、そのままだと最後の<code>print(a.name)</code>は問題なく表示されるが、<code>self.name</code>をすべて <code>self.__name</code>に変更して最後の行を <code>print(a.__name)</code>に変更すると、[実行結果その2] のようにエラーとなってアクセスできなくなることがわかる。</p>
+<pre><code>class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):   # メソッドの定義 
+        print(f'{self.name}: わんわん')
+
+a = Dog('マサル')
+a.bark()
+print(a.name)
+</code></pre>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-a94a5d8e-show, #collapse-a94a5d8e-hide&#39;).toggle(); $(&#39;#collapse-a94a5d8e&#39;).fadeToggle(150);; return false;" id="collapse-a94a5d8e-show" class="icon icon-collapsed collapsible">実行結果 その1</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-a94a5d8e-show, #collapse-a94a5d8e-hide&#39;).toggle(); $(&#39;#collapse-a94a5d8e&#39;).fadeToggle(150);; return false;" id="collapse-a94a5d8e-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果 その1</a></p><div id="collapse-a94a5d8e" class="collapsed-text" style="display:none;"><pre><code>マサル: わんわん
+マサル
+</code></pre></div><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-715e0036-show, #collapse-715e0036-hide&#39;).toggle(); $(&#39;#collapse-715e0036&#39;).fadeToggle(150);; return false;" id="collapse-715e0036-show" class="icon icon-collapsed collapsible">実行結果 その2</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-715e0036-show, #collapse-715e0036-hide&#39;).toggle(); $(&#39;#collapse-715e0036&#39;).fadeToggle(150);; return false;" id="collapse-715e0036-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果 その2</a><div id="collapse-715e0036" class="collapsed-text" style="display:none;"><p>Sample4_9.pyの <code>self.name</code>を全て<code>self.__name</code>に変更し、最後の<code>a.name</code>を <code>a.__name</code>にした場合</p>
+<pre><code>マサル: わんわん
+Traceback (most recent call last):
+  File "/Users/takane/testDog.py", line 9, in &lt;module&gt;
+    print(a.__name)
+AttributeError: 'Dog' object has no attribute '__name'
+</code></pre></div><p></p>
+<a name="Sample4_10py"></a>
+<h3>Sample4_10.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_10py" class="wiki-anchor">¶</a></h3>
+<p>Pythonでは、スーパークラスのメソッドをサブクラスでキーワードなしにそのままオーバーライド(重ね書き)できる。スーパークラスのメソッドの方を呼び出したい場合は、 <code>super().</code>を前につけて呼び出す。</p>
+<pre><code>class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):   # メソッドの定義 
+        print(f'{self.name}: わんわん')
+
+class GuideDog(Dog):
+    def stopAtCurb(self):
+        print(f'{self.name}: 歩道の端で止まります')
+
+    def avoidObstacle(self):
+        print(f'{self.name}: 障害物をよけます')
+
+    def bark(self):            # オーバーライド
+        print(f'{self.name}:きゃんきゃん (オーバーライド)')
+        super().bark()         # 親クラスのbark()を呼ぶ場合
+
+c = GuideDog('タロ') 
+c.bark()                       # オーバーライドされたbark関数の呼び出し
+</code></pre>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-619464a3-show, #collapse-619464a3-hide&#39;).toggle(); $(&#39;#collapse-619464a3&#39;).fadeToggle(150);; return false;" id="collapse-619464a3-show" class="icon icon-collapsed collapsible">実行結果</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-619464a3-show, #collapse-619464a3-hide&#39;).toggle(); $(&#39;#collapse-619464a3&#39;).fadeToggle(150);; return false;" id="collapse-619464a3-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果</a></p><div id="collapse-619464a3" class="collapsed-text" style="display:none;"><pre><code>タロ:きゃんきゃん (オーバーライド)
+タロ: わんわん
+</code></pre></div><p></p>
+<a name="モジュールとパッケージ-後編"></a>
+<h2>モジュールとパッケージ 後編<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%A8%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8-%E5%BE%8C%E7%B7%A8" class="wiki-anchor">¶</a></h2>
+<p>すでにモジュール (パッケージ) の呼び出し方については「Pythonの基礎2」で紹介したが、ここでは自作の関数やクラスをモジュールにしたり、パッケージにしたりして利用する方法を説明する。<br>
+まずは、復習から。モジュールを自分のプログラムから利用するには、主に以下の3パターンが使われる。</p>
+<p><strong>import モジュール名</strong><br>
+importを使って外部のモジュールを読み込んで利用。この場合 <strong>モジュール名.関数名</strong>や<strong>モジュール名.変数名</strong> で呼び出す</p>
+<pre><code>import math
+print(math.pi)
+</code></pre>
+<p><strong>import モジュール名 as 別名</strong><br>
+外部モジュールを読み込んで、以降別名で表記</p>
+<pre><code>import numpy as np
+narray = np.array([[1,2,3] , [4,5,6]])
+...
+</code></pre>
+<p><strong>from モジュール名 import クラス名 (あるいは関数名、変数名)</strong><br>
+外部モジュールの関数名やクラス名などを、モジュール名を省略して直接呼び出す</p>
+<pre><code>from numpy import sqrt
+print(sqrt(3))
+</code></pre>
+<a name="単一ファイルのモジュールの作成と利用"></a>
+<h3>単一ファイルのモジュールの作成と利用<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#%E5%8D%98%E4%B8%80%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%A8%E5%88%A9%E7%94%A8" class="wiki-anchor">¶</a></h3>
+<p>すでに出てきた Sample4_1.py のshow()関数を自分のプログラム myprog.pyで再利用したいとする。Sample4_1.pyと同じ場所に、以下の内容でmyprog.pyを作成する。ここでは Sample4_1(a).pyがモジュールファイルとなる。</p>
+<a name="myprog1py"></a>
+<h4>myprog1.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#myprog1py" class="wiki-anchor">¶</a></h4>
+<pre><code>import Sample4_1
+
+print("myprogを実行します")
+Sample4_1.show(100,100)
+</code></pre>
+<p>しかし、これを実行 (<code>python myprog1.py</code>)すると、</p>
+<pre><code>最初の引数は 10で、2番目の引数は 12 です。
+myprogを実行します
+最初の引数は 100で、2番目の引数は 100 です。
+</code></pre>
+<p>となってしまう。実行結果の1行目が表示されたのは、Sample4_1.pyの中に元々あったshow()関数を呼び出すコードが実行されたためである。Sample4_1.pyをモジュール専用としてしか利用しないのであれば、Sample4_1.pyからこの呼び出し部分を削除して関数定義だけにすればよい。</p>
+<a name="Sample4_1apy"></a>
+<h4>Sample4_1a.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_1apy" class="wiki-anchor">¶</a></h4>
+<p>あるいは、以下のように、if文の中に直接実行の処理を入れると、モジュール呼び出しでも単体で直接実行 (<code>python Sample4_1a.py</code>) でも対応可能になる。</p>
+<pre><code>def show(arg1, arg2):
+    print(f'最初の引数は {arg1}で、2番目の引数は {arg2} です。')
+
+if __name__ == '__main__':
+    print("Sample4_1aを直接実行")
+    show(10,12)
+</code></pre>
+<a name="myprog1apy"></a>
+<h4>myprog1a.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#myprog1apy" class="wiki-anchor">¶</a></h4>
+<p>Sample4_1aをインポートして利用した例。2行目を3行目のコメントの行に置き換えると、モジュール名を省略して呼び出せる (最後のコメント行)。</p>
+<pre><code># Sample4_1aに変更
+import Sample4_1a
+# from Sample4_1a import show
+
+print("myprogを実行します")
+Sample4_1a.show(100,100)
+# show(100,100)
+</code></pre>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-c319ba79-show, #collapse-c319ba79-hide&#39;).toggle(); $(&#39;#collapse-c319ba79&#39;).fadeToggle(150);; return false;" id="collapse-c319ba79-show" class="icon icon-collapsed collapsible">実行結果 (myprog1a.py)</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-c319ba79-show, #collapse-c319ba79-hide&#39;).toggle(); $(&#39;#collapse-c319ba79&#39;).fadeToggle(150);; return false;" id="collapse-c319ba79-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果 (myprog1a.py)</a></p><div id="collapse-c319ba79" class="collapsed-text" style="display:none;"><pre><code>myprogを実行します
+最初の引数は 100で、2番目の引数は 100 です。
+</code></pre></div><p></p>
+<p>Sample4_1aを直接実行した結果は、<br>
+<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-5bb048be-show, #collapse-5bb048be-hide&#39;).toggle(); $(&#39;#collapse-5bb048be&#39;).fadeToggle(150);; return false;" id="collapse-5bb048be-show" class="icon icon-collapsed collapsible">実行結果 (Sample4_1a.py)</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-5bb048be-show, #collapse-5bb048be-hide&#39;).toggle(); $(&#39;#collapse-5bb048be&#39;).fadeToggle(150);; return false;" id="collapse-5bb048be-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果 (Sample4_1a.py)</a></p><div id="collapse-5bb048be" class="collapsed-text" style="display:none;"><pre><code>Sample4_1aを直接実行
+最初の引数は 10で、2番目の引数は 12 です。
+</code></pre></div><p></p>
+<a name="Sample4_10apy"></a>
+<h4>Sample4_10a.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#Sample4_10apy" class="wiki-anchor">¶</a></h4>
+<p>クラスの場合も、全く同じように</p>
+<pre><code>class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):   # メソッドの定義 
+        print(f'{self.name}: わんわん')
+
+class GuideDog(Dog):
+    def stopAtCurb(self):
+        print(f'{self.name}: 歩道の端で止まります')
+
+    def avoidObstacle(self):
+        print(f'{self.name}: 障害物をよけます')
+
+    def bark(self):            # オーバーライド
+        print(f'{self.name}:きゃんきゃん (オーバーライド)')
+        super().bark()         # 親クラスのbark()を呼ぶ場合
+
+if __name__ == '__main__':
+    c = GuideDog('タロ') 
+    c.bark()                       # オーバーライドされたbark関数の呼び出し
+</code></pre>
+<a name="myprog2py"></a>
+<h4>myprog2.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#myprog2py" class="wiki-anchor">¶</a></h4>
+<p>クラスの場合も1行目を2行目の内容に置き換えると、イニシャライザを呼び出す際にモジュール名 (Sample4_10a) を省略できる。</p>
+<pre><code>import Sample4_10a
+# from Sample4_10a import GuideDog
+
+print("myprogを実行します")
+a = Sample4_10a.GuideDog('タロ')
+# a = GuideDog('タロ')
+a.bark()
+</code></pre>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-cc2aa1cf-show, #collapse-cc2aa1cf-hide&#39;).toggle(); $(&#39;#collapse-cc2aa1cf&#39;).fadeToggle(150);; return false;" id="collapse-cc2aa1cf-show" class="icon icon-collapsed collapsible">実行結果 (myprog2.py)</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-cc2aa1cf-show, #collapse-cc2aa1cf-hide&#39;).toggle(); $(&#39;#collapse-cc2aa1cf&#39;).fadeToggle(150);; return false;" id="collapse-cc2aa1cf-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果 (myprog2.py)</a></p><div id="collapse-cc2aa1cf" class="collapsed-text" style="display:none;"><pre><code>myprogを実行します
+タロ:きゃんきゃん (オーバーライド)
+タロ: わんわん
+</code></pre></div><p></p>
+<a name="パッケージの作成と利用"></a>
+<h3>パッケージの作成と利用<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%A8%E5%88%A9%E7%94%A8" class="wiki-anchor">¶</a></h3>
+<p>次にパッケージを作成してみる。パッケージは複数のモジュールファイルを１つのフォルダ(ディレクトリ)にまとめたもので、通常そのフォルダには<code> __init__.py</code>ファイルも用意しておく。以前のバージョンではこのファイルは必須であったが、現在はなくてもパッケージとして利用はできる。ただし、以下で説明するように単一モジュールと同じように利用するためには<code>__init__.py</code>の設定が必要となる。</p>
+<p>例えば、以下のような構成でパッケージ pack1を作成したとする。</p>
+<pre><code>├── myprog3.py
+└── pack1
+    ├── __init__.py
+    ├── module1.py
+    └── module2.py
+</code></pre>
+<a name="pack1__init__py"></a>
+<h4>pack1/__init__.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#pack1__init__py" class="wiki-anchor">¶</a></h4>
+<p>まずは中身は空でファイルだけ作成する</p>
+<a name="pack1module1py"></a>
+<h4>pack1/module1.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#pack1module1py" class="wiki-anchor">¶</a></h4>
+<pre><code>def func1():
+    print("pack1内のmodule1内のfunc1を実行しました")
+</code></pre>
+<a name="pack1module2py"></a>
+<h4>pack1/module2.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#pack1module2py" class="wiki-anchor">¶</a></h4>
+<pre><code>def func2():
+    print("pack1内のmodule2内のfunc2を実行しました")
+</code></pre>
+<a name="myprog3py"></a>
+<h4>myprog3.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#myprog3py" class="wiki-anchor">¶</a></h4>
+<p>これらをmyprog3.pyから呼び出すには、以下のように記述する。基本はfunc1()関数のように<strong>パッケージ名.モジュール名.関数名</strong> だが、func2()関数のように、2行目に指定した<code>from...import</code> を使えば <strong>パッケージ名.モジュール名</strong> を省略して呼び出すことはできる。</p>
+<pre><code>import pack1.module1
+from pack1.module2 import func2
+
+pack1.module1.func1()
+func2()
+</code></pre>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-a49c915c-show, #collapse-a49c915c-hide&#39;).toggle(); $(&#39;#collapse-a49c915c&#39;).fadeToggle(150);; return false;" id="collapse-a49c915c-show" class="icon icon-collapsed collapsible">実行結果 (myprog3.py)</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-a49c915c-show, #collapse-a49c915c-hide&#39;).toggle(); $(&#39;#collapse-a49c915c&#39;).fadeToggle(150);; return false;" id="collapse-a49c915c-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果 (myprog3.py)</a></p><div id="collapse-a49c915c" class="collapsed-text" style="display:none;"><pre><code>pack1内のmodule1内のfunc1を実行しました
+pack1内のmodule2内のfunc2を実行しました
+</code></pre></div><p></p>
+<a name="__init__py"></a>
+<h4>__init.__.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#__init__py" class="wiki-anchor">¶</a></h4>
+<p>しかし、使う側 (myprog3.py) でパッケージ名とモジュール名を指定するのは面倒となる。単一モジュールファイルと同じように、パッケージ名だけをインポートして利用できるようにするには、 <code>__init__.py</code>に以下のように各モジュールで定義されている関数をimportで一つ一つ記述しておく。全ての関数をまとめてインポートしたい場合はワイルドカード (*)を使うこともできる。</p>
+<pre><code>from pack1.module1 import func1
+from pack1.module2 import func2
+# 同じpack1内のファイルなので、上の2行は以下のようにも記述できる
+# from .module1 import func1
+# from .module2 import func2
+# また各モジュール内の全ての関数をimportする場合はワイルドカードを使うことも可能
+# from .module1 import *
+# from .module2 import *
+</code></pre>
+<a name="myprog4py"></a>
+<h4>myprog4.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#myprog4py" class="wiki-anchor">¶</a></h4>
+<p>以上の設定を行うと、myprog4.pyは以下のようにシンプルに記述できる。最後の行のようにあえてモジュール名を明記して呼び出すこともできる。例えば、module1とmodule2に同じ名前の関数があった場合に、モジュール名で区別して呼び出すことができる。</p>
+<pre><code>import pack1
+
+pack1.func1()
+pack1.func2()
+# あえてモジュール名を明記
+pack1.module2.func2()
+</code></pre>
+<p><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-ea39ebf2-show, #collapse-ea39ebf2-hide&#39;).toggle(); $(&#39;#collapse-ea39ebf2&#39;).fadeToggle(150);; return false;" id="collapse-ea39ebf2-show" class="icon icon-collapsed collapsible">実行結果 (myprog4.py)</a><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/176d7c20e6d19b138544fa0682637118/240501_webprog/index.html#" onclick="$(&#39;#collapse-ea39ebf2-show, #collapse-ea39ebf2-hide&#39;).toggle(); $(&#39;#collapse-ea39ebf2&#39;).fadeToggle(150);; return false;" id="collapse-ea39ebf2-hide" class="icon icon-expanded collapsible" style="display:none;">実行結果 (myprog4.py)</a></p><div id="collapse-ea39ebf2" class="collapsed-text" style="display:none;"><pre><code>pack1内のmodule1内のfunc1を実行しました
+pack1内のmodule2内のfunc2を実行しました
+pack1内のmodule2内のfunc2を実行しました
+</code></pre></div><p></p>
+
+
+</body></html>
