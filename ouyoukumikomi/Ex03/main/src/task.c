@@ -79,7 +79,10 @@ static void taskBlink(void *arg)
 		vTaskDelay(DELAY_BLINK);
 	}
 }
-
+void led_on() {
+}
+void led_off() {
+}
 // --- functions (static)
 // ========================================================
 // Name       : initialize
