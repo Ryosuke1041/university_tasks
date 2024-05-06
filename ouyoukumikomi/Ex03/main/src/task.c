@@ -71,11 +71,6 @@ static void taskBlink(void *arg)
 		1 second (or 500 millisecond) delay
 		call function 'bl_blink'
 		led_state = !led_state;
-		if (led_state) {
-            led_on();
-        } else {
-            led_off();
-        }
 		vTaskDelay(DELAY_BLINK);
 	}
 }
