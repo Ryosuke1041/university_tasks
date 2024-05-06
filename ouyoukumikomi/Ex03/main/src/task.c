@@ -68,8 +68,8 @@ static void taskBlink(void *arg)
 	bl_init();
 	int led_state = 0;
 	for (;;) {	// closed loop
-		// *** Hint:1 second (or 500 millisecond) delay
-		// *** Hint:call function 'bl_blink'
+		1 second (or 500 millisecond) delay
+		call function 'bl_blink'
 		led_state = !led_state;
 		if (led_state) {
             led_on();

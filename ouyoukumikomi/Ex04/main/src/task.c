@@ -94,9 +94,9 @@ static void taskBlink(void *arg)
 	puts(taskname);
 
 	bl_init();
-	for (;;) {	// closed loop
-		// *** Hint:delay
-		// *** Hint:blink
+	for (;;) {	//  closed loop
+		1 second (or 1000 millisecond) delay
+		call function 'bl_blink'
 	}
 }
 
@@ -115,9 +115,11 @@ static void taskIncrement(void *arg)
 	puts(taskname);
 
 	ct_init();
-	for (;;) {	// closed loop
-		// *** Hint:delay
-		// *** Hint:increment
+	uint8_t count = 0;
+	for (;;) {	closed loop
+		ct_display_hex(count);
+		count++;
+		vTaskDelay(pdMS_TO_TICKS(250));
 	}
 }
 
