@@ -68,8 +68,10 @@ static void taskBlink(void *arg)
 	bl_init();
 	int led_state = 0;
 	for (;;) {	// closed loop
-		1 second (or 500 millisecond) delay
-		call function 'bl_blink'
+		//1 second (or 500 millisecond) delay
+		//call function 'bl_blink'
+		led_on();
+		led_off();
 		led_state = !led_state;
 		vTaskDelay(DELAY_BLINK);
 	}
