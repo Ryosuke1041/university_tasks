@@ -28,6 +28,7 @@
 // --- data (static)
 static TaskHandle_t		taskHandleIncrement = NULL;
 static TimerHandle_t	timerHandleIncrement = NULL;
+static uint8_t counter = 0;
 
 // --- prototypes (static)
 static void	taskIncrement(void *arg);
@@ -105,10 +106,11 @@ static void taskIncrement(void *arg)
 			NULL,
 			TICKS_TO_WAIT
 		);
-		if (/*** Hint:check notified */pdPASS) {
+		if (pd != pdPASS) {
 			puts("not notified");
 		} else {
-			// *** Hint:Increment
+			counter++;
+            ct_display(counter);
 		}
 	}
 }
@@ -124,6 +126,7 @@ static void taskIncrement(void *arg)
 static void callbackIncrement(TimerHandle_t timer)
 {
 	// *** Hint:notify to taskIncrement
+	xTaskNotifyGive(taskHandleIncrement);
 	return;
 }
 
