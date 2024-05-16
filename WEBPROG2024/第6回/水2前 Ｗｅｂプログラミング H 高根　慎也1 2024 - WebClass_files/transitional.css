@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+
+/*-------------------------------------
+ *
+ *  BoxStyles
+ *
+ *-------------------------------------*/
+
+BODY { margin:0px 0px 0px 0px; }
+
+.sidetitle {
+	padding: 2px 0px 2px 10px;
+}
+.sidenav {
+	padding: 2px 0px 2px 10px;
+}
+.webclass_title{
+	padding: 4px 10px 4px 10px;
+}
+.title_head{
+	margin-right:10px;
+}
+.width100p {
+	width: 100%;
+}
+.width90p {
+	width: 90%;
+}
+
+th {
+	padding-left : 0.5em;
+}
+
+ul.hint,
+p.hint {
+	margin : 1em 0.5em;
+}
+
+a.helpbtn {
+/*
+    padding: 0;
+    border-style: solid;
+    border-color: #0000ff;
+    border-width: 0 0 1 0;
+*/
+}
+a.helpbtn img {
+    padding: 2px;
+    border: none;
+    margin: 1px;
+}
+a.helpbtn:hover img {
+    border-style: solid;
+    border-width: 1px;
+    margin: 0;
+}
+
+.sorticon {
+	padding-left: 0.3em;
+	font-size: 80%;
+
+}
+
+div#WsTitle {
+    margin : 0px;
+    padding : 0.5em 0.3em 0.5em 0.7em;
+}
+
+div#WsTitle h1 {
+    padding : 0px;
+    margin : 0px;
+}
+div#WsTitle h2 {
+	margin : 0px;
+	padding : 0px;
+    margin-left: 0.8em;
+    padding-top: 0.1em;
+    padding-left: 0.2em;
+}
+div#WsTitle h3 {
+	margin : 0px;
+	padding : 0px;
+    margin-left: 1.5em;
+    padding-top: 0.1em;
+    padding-left: 0.2em;
+}
+div#WsTitle h1 a {
+	display: block;
+	margin: 0;
+	padding : 0.1em;
+}
+
+#User {
+    text-align: right;
+    padding: 0.3em 0.3em;
+    margin-bottom: 0.5em;
+}
+
+
+/*-------------------------------------
+ *
+ *  Font/Text Styles
+ *
+ *-------------------------------------*/
+body {font-size: 10.5pt;}
+H1		{ font-size: 18pt}
+H2		{ font-size: 16pt}
+H3		{ font-size: 12pt}
+
+SELECT		{ font-size: 13px}
+TD			{ font-size: 13px}
+A:active	{ text-decoration: underline;  }
+A:hover		{ text-decoration: underline;  }
+
+.size5		{
+	font-size: 18px;
+}
+.size4		{
+	font-size: 16px;
+}
+.size3		{
+	font-size: 13px;
+}
+.size2		{
+	font-size: 11px;
+}
+.size1		{
+	font-size: 19px;
+}
+
+.sidetitle {
+	font-size: 14px;
+}
+.sidenav {
+	font-size: 13px;
+}
+.webclass_title{
+	font-size: 18px;
+	font-weight: bold;
+}
+.title_head{
+	font-size:14px;
+}
+
+
+th			{ 	font-weight : normal;
+				text-align : left;}
+
+ul.hint,
+p.hint {
+	font-size : 8pt;
+}
+p.tips {
+	font-size : 8pt;
+}
+
+img.attach_file {
+	border-width: 0px;
+}
+
+div#WsTitle,
+#User {
+	font-size: 10pt;
+}
+div#WsTitle h1 {
+    font-size : 14px;
+	line-height : 1.4em;
+	letter-spacing : 0.1em;
+}
+div#WsTitle a {
+    font-size : 14px;
+	line-height : 1.4em;
+}
+div#WsTitle h2 {
+    font-size : 12px;
+    font-weight: normal;
+	line-height : 1.4em;
+	letter-spacing : 0.1em;
+}
+div#WsTitle h3 {
+    font-size : 12px;
+    font-weight: normal;
+	line-height : 1.4em;
+	letter-spacing : 0.1em;
+}
+
+/*-------------------------------------
+ *
+ *  Colors
+ *
+ *-------------------------------------*/
+
+
+table tr.odd,
+table td.odd {
+	background-color : #ffffff;
+}
+table tr.eve,
+table td.eve {
+	background-color : #f5f5f5;
+}
+
+a:active {
+	color : #6666ff;
+}
+a:hover	{
+	color: #ffa500;
+}
+
+
+a:link .sorticon,
+a:visited .sorticon,
+a:active .sorticon {
+	color: #fff;
+}
+a:hover .sorticon{
+	color: #ffa500;
+}
+
+
+.sidetitle {
+	color: #FFFFFF;
+}
+
+/* color definition class */
+.bkgray		{ background-color: #DCDCDC;}
+.bktomato	{ background-color: #FF6347;}
+.bkkhaki	{ background-color: #F0E68C;}
+.bklightgray	{ background-color: #E1E1E1;}
+.white		{
+	color: #FFFFFF;
+}
+.lightgray	{
+	color: #E1E1E1;
+}
+.dimgray	{ color: #5e5e5e;}
+.silver		{ color: #C0C0C0;}
+.dark_blue	{ color: #333366;}
+.skyblue	{ color: #1E90FF;}
+.white_moji	{ color: #FFFFFF;}
+.blue_moji	{ color: #0066CC;}
+.red_moji	{ color: #cc3300;}
+.tomato_moji	{ color: #bb5a46;}
+
+th {
+	background-color : #1365b5;
+	color : #ffffff;
+}
+
+p.tips {
+	color : #0066CC;
+}
+.caution,
+.attention {
+	color : #ff3300;
+}
+em.new {
+	color :#ff6347;
+}
+
+a.helpbtn:hover img {
+    border-color: #999999;
+}
+
+div#WsTitle	{
+  color: #fff;
+  background-color: #1365b5;
+  word-wrap: break-word;
+}
+	div#WsTitle h1,
+	div#WsTitle a:link,
+	div#WsTitle a:visited {
+    color: #fff;
+	}
+div#WsTitle h1 {
+    border-style: solid;
+    border-color: #999999;
+    border-width: 0 0 1px 0;
+}
+div#WsTitle h2.unittitle {
+    border: solid #999999 0;
+    border-width: 0 0 1px 0;
+}
+
+.bgc_main {
+    background-color: #4682b4;
+    color: #fff;
+}
+.bgc_main a:link,
+.bgc_main a:visited,
+.bgc_main a:active,
+.bgc_main a:hover {
+    color: #fff;
+}
+.bgc_main a:hover {
+	color: #ffa500;
+}
+
+

@@ -1,0 +1,764 @@
+@charset "UTF-8";
+/*
+ * Do not include 'basestyle.css'.
+ *
+ *  @import url("basestyle.css");
+ */
+
+/*-------------------------------------
+ *
+ *  BoxStyles
+ *
+ *-------------------------------------*/
+p.hint {
+	margin : 1em 0.5em;
+}
+
+h1.succeeded,
+h2.succeeded,
+h3.succeeded,
+h4.succeeded,
+h5.succeeded,
+h6.succeeded,
+h1.failed,
+h2.failed,
+h3.failed,
+h4.failed,
+h5.failed,
+h6.failed,
+h1.warning,
+h2.warning,
+h3.warning,
+h4.warning,
+h5.warning,
+h6.warning,
+h1.notice,
+h2.notice,
+h3.notice,
+h4.notice,
+h5.notice,
+h6.notice {
+	margin : 1em 25% 0em 25%;
+	padding : 0.4em;
+}
+
+dl.resultdata {
+	padding : 0.5em;
+}
+	dl.resultdata dt,
+	dl.resultdata dt.notice {
+		padding : 0.3em 0em 0.2em 0em;
+	}
+	dl.resultdata dd,
+	dl.resultdata dd.notice {
+		padding-left : 1em;
+	}
+
+div.resultsection {
+	margin : 0em 25% 1em 25%;
+}
+	div.resultsection p {
+		margin : 0px;
+		padding : 0.3em;
+	}
+	div.resultsection dl.resultdata {
+		margin-top : 2px;
+	}
+
+div#WsTitle	{
+	margin : 0px;
+	padding : 1em 0.3em 1em 1em;
+}
+div#WsTitle h1 {
+	padding : 0px;
+	margin : 0px;
+}
+
+fieldset{
+	border-width : 0px;
+}
+input:focus,
+textarea:focus {
+	border-style : solid;
+	border-width : 2px;
+}
+
+hr {
+	margin : 1em 0;
+	width : 90%;
+	height : 1px;
+	border-width : 0px;
+}
+
+h1#ViewTitle {
+	margin : 0.5em 0 1em 0.7em;
+	padding-left : 0.5em;
+	border-style : solid;
+	border-width : 0 0 2px 0;
+}
+
+table#QstnEndConfirm {
+	margin : 1em 0;
+	width : 100%;
+}
+table#QstnOperation {
+	margin : 1em 0;
+	width : 100%;
+}
+table#QstnOperation td {
+	padding : 0 1em;
+}
+div.contenttxt {
+	margin : 2em auto;
+	width : 90%;
+}
+
+div.contentfile {
+}
+
+div.section {
+	margin : 0.5em auto 1em 8em;
+}
+div.section1 {
+	margin : 1em auto 2em 1em;
+}
+
+div.question {
+	margin : 1em;
+}
+dl.question{
+	margin : 0;
+	margin-top : 1em;
+}
+	dl.question dt {
+		display : block;
+		float : left;
+		width : 6em;
+	}
+	dl.question dd {
+		display : block;
+		margin-left : 7em;
+        margin-right: 1em;
+	}
+table.qstnoptions {
+	margin : 0;
+	margin-right : auto;
+	width : auto;
+}
+	table.qstnoptions td.point {
+		padding-top : 0.3em;
+	}
+table.seloptions,
+table.selcomplex {
+	width : auto;
+	border-collapse : collapse;
+}
+	table.seloptions th,
+	table.selcomplex th {
+		margin : 0em;
+		padding : 0.3em 0em 0em 0.7em;
+	}
+	table.seloptions td,
+	table.selcomplex td {
+		margin : 0em;
+		padding : 0em 0.5em;
+		padding-top : 0.3em;
+	}
+	table.seloptions th,
+	table.seloptions td {
+		border-style : solid;
+		border-width : 0 0 1px 0;
+	}
+	table.seloptions input,
+	table.selcomplex input {
+		margin-top : 0.2em;
+	}
+    table.seloptions label,
+	table.seloptions label p {
+		margin: 0;
+        padding: 0;
+	}
+table.qstnmatrix {
+	border : 0;
+	border-collapse : collapse;
+}
+	table.qstnmatrix th {
+		border-width : 1px;
+		border-style : solid;
+		padding : 0.2em;
+	}
+	table.qstnmatrix td {
+		padding : 0.2em;
+		border-width : 1px;
+		border-style : solid;
+	}
+
+
+table#QstnOperation {
+	margin : 1em;
+	margin-left : 2em;
+	width : auto;
+	border-collapse : collapse;
+}
+table#QstnEndConfirm {
+	margin : 2em auto 2em 2em;
+	width : auto;
+	border-collapse : collapse;
+}
+	table#QstnEndConfirm th {
+		padding : 1em;
+		border-width : 0;
+	}
+	table#QstnEndConfirm td {
+		padding : 1em;
+	}
+input#GradeBtn{
+	margin-bottom : 0.3em;
+}
+input#BkmkBtn {
+}
+input#QstnNextBtn,
+input#QstnPrevBtn,
+input#QstnChkBtn,
+input#ContinueQstnBtn {
+}
+
+table.layouter{
+	margin : 0px;
+	padding : 0px;
+	border-width : 0px;
+	width : 100%;
+	height : 100%;
+	border-collapse : collapse;
+}
+	table.layouter > td {
+		margin : 0px;
+		border-width : 0;
+	}
+	table.layouter td.navi {
+		width : 20%;
+		max-width : 50%;
+	}
+table#ContentInfo {
+	margin : 1em auto;
+	border-collapse : collapse;
+}
+	table#ContentInfo th {
+		border-style : solid;
+		border-width : 1px;
+		padding-left : 0.5em;
+	}
+	table#ContentInfo td {
+		border-style : solid;
+		border-width : 0px 1px 1px 1px;
+		padding : 0.5em 1em;
+	}
+ul.reportinfo,
+ul.restrictterms,
+ul.absoluteterms {
+	margin : 0px;
+	padding-left : 1em;
+	list-style : none;
+}
+ul.reportinfo li,
+ul.restrictterms li,
+ul.absoluteterms li {
+	margin : 0px;
+	padding-right : 0.5em;
+}
+
+div#WsTitle {
+    margin : 0px;
+    padding : 0.5em 0.3em 0.5em 0.7em;
+}
+
+div#WsTitle h1 {
+    padding : 0px;
+    margin : 0px;
+}
+div#WsTitle h2 {
+	margin : 0px;
+	padding : 0px;
+    margin-left: 0.8em;
+    padding-top: 0.1em;
+    padding-left: 0.2em;
+}
+div#WsTitle h3 {
+	margin : 0px;
+	padding : 0px;
+    margin-left: 1.5em;
+    padding-top: 0.1em;
+    padding-left: 0.2em;
+}
+div#WsTitle h1 a {
+	display: block;
+	margin: 0;
+	padding : 0.1em;
+}
+
+#User {
+    text-align: right;
+    padding: 0.3em 0.3em;
+    margin-bottom: 0.5em;
+}
+
+div.preview_area {
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	display: table;
+}
+
+div.preview_area p {
+	min-height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*-------------------------------------
+ *
+ *  Font/Text Styles
+ *
+ *-------------------------------------*/
+
+body {
+	font-size : 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:active,
+a:hover	{
+	text-decoration: underline;
+}
+
+
+p.hint,
+p.tips {
+	font-size : 10pt;
+}
+
+h1.succeeded,
+h2.succeeded,
+h3.succeeded,
+h4.succeeded,
+h5.succeeded,
+h6.succeeded,
+h1.failed,
+h2.failed,
+h3.failed,
+h4.failed,
+h5.failed,
+h6.failed,
+h1.warning,
+h2.warning,
+h3.warning,
+h4.warning,
+h5.warning,
+h6.warning,
+h1.notice,
+h2.notice,
+h3.notice,
+h4.notice,
+h5.notice,
+h6.notice {
+	font-size : 11pt;
+	font-weight : bold;
+	text-align : center;
+	line-height : 1em;
+}
+
+dl.resultdata dt,
+dl.resultdata dt.notice {
+  	color : #000000;
+	font-weight : bold;
+}
+
+div.resultsection p {
+	text-align : center;
+	font-size : 10pt;
+	line-height : 1.5em;
+	letter-spacing : 0.1em;
+}
+
+legend {
+	font-size : 11pt;
+	letter-spacing : 0.1em;
+}
+label {
+	padding-right : 0.2em;
+	padding-left : 0.2em;
+/*	letter-spacing : 0.1em; */
+}
+select {
+	font-size: 13px;
+}
+input {
+	font-size : 11pt;
+}
+textarea {
+	font-size : 11pt;
+  line-height: 1.4em;
+}
+
+h1#ViewTitle {
+	font-size : 11pt;
+	font-weight : normal;
+}
+
+div.question,
+dl.question{
+	font-size : 10pt;
+}
+	dl.question dt {
+		text-align : right;
+		font-weight : bold;
+	}
+
+.contenttxt,
+div.question,
+dl.question dt {
+	line-height: 1.5em;
+}
+
+table.qstnoptions caption {
+	font-weight : bold;
+	text-align : left;
+}
+table.qstnoptions td.point {
+	font-size : 8pt;
+	text-align : right;
+}
+table.qstnoptions p.hint {
+	font-size : 10pt;
+}
+table.qstnoptions textarea {
+	font-family: monospace;
+}
+
+table.seloptions th,
+table.selcomplex th {
+
+	font-weight : normal;
+	text-align : right;
+	vertical-align : top;
+}
+table.seloptions td,
+table.selcomplex td {
+	text-align : left;
+	vertical-align : top;
+}
+table.qstnmatrix td.correct {
+	font-weight : bold;
+	font-size : 12pt;
+}
+
+table#QstnEndConfirm th {
+	font-weight : bold;
+}
+table.layouter > td {
+	text-align : center;
+}
+table.layouter td.navi {
+	text-align : left;
+}
+table#ContentInfo {
+	margin-top: 9em;
+}
+table#ContentInfo th {
+	font-size : 12pt;
+	text-align : left;
+	font-weight : normal;
+	line-height : 1.8em;
+}
+table#ContentInfo td {
+	text-align : left;
+}
+ul.reportinfo li,
+ul.restrictterms li,
+ul.absoluteterms li {
+	font-size : 8pt;
+}
+
+td.quotedUserText {
+	font-family: monospace;
+}
+
+.text-report-reader {
+  white-space: break-spaces;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
+div#WsTitle,
+#User {
+	font-size: 10pt;
+}
+div#WsTitle h1 {
+    font-size : 14px;
+	line-height : 1.4em;
+	letter-spacing : 0.1em;
+}
+div#WsTitle a {
+    font-size : 14px;
+	line-height : 1.4em;
+}
+div#WsTitle h2 {
+    font-size : 12px;
+    font-weight: normal;
+	line-height : 1.4em;
+	letter-spacing : 0.1em;
+}
+div#WsTitle h3 {
+    font-size : 12px;
+    font-weight: normal;
+	line-height : 1.4em;
+	letter-spacing : 0.1em;
+}
+
+div.preview_area p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*-------------------------------------
+ *
+ *  Colors
+ *
+ *-------------------------------------*/
+
+body {
+	background-color : #ffffff;
+	color : #333333;
+}
+
+a:active {
+	color : #6666ff;
+}
+a:hover	{
+	color: #ffa500;
+}
+
+
+p.tips {
+	color : #1674d0;
+}
+
+
+h1.succeeded,
+h2.succeeded,
+h3.succeeded,
+h4.succeeded,
+h5.succeeded,
+h6.succeeded {
+	background-color : #eeeeee;
+ 	color : #008000;
+}
+h1.failed,
+h2.failed,
+h3.failed,
+h4.failed,
+h5.failed,
+h6.failed {
+	background-color : #eeeeee;
+ 	color : #ff3300;
+}
+h1.warning,
+h2.warning,
+h3.warning,
+h4.warning,
+h5.warning,
+h6.warning,
+h1.notice,
+h2.notice,
+h3.notice,
+h4.notice,
+h5.notice,
+h6.notice {
+	background-color : #eeeeee;
+ 	color : #000000;
+}
+
+dl.resultdata dt.error{
+ 	color : #ff3300;
+}
+dl.resultdata dd.error {
+}
+dl.resultdata dt.warning {
+ 	color : #6600cc;
+}
+dl.resultdata dd.warning {
+}
+
+div.resultsection p,
+div.resultsection dl.resultdata {
+	background-color : #eeeeee;
+}
+
+input:focus,
+textarea:focus {
+	border-color : #666699;
+}
+
+hr {
+	background-color : #cccccc;
+}
+
+
+h1#ViewTitle {
+	color : #333366;
+	border-color : #cccccc;
+}
+
+table.qstnoptions td.point {
+	color : #696969;
+}
+table.qstnoptions p.hint {
+	color : #0066cc;
+}
+	table.qstnoptions label:hover {
+		background-color: #cccccc;
+	}
+
+table.seloptions th,
+table.selcomplex th {
+	background-color : #ffffff;
+	color : #000000;
+}
+table.seloptions th,
+table.seloptions td {
+	border-color : #cccccc;
+}
+table.qstnmatrix th {
+	background-color : #F0E68C;
+	border-color : #b2b2b2;
+	color : #000000;
+}
+table.qstnmatrix td {
+	border-color : #b2b2b2;
+}
+table.qstnmatrix label {
+	margin:0;
+	padding:0.2em 0.7em;
+}
+
+table#ContentInfo th {
+	background-color : #4682b4;
+	border-color : #b2b2b2;
+	color : #ffffff;
+}
+table#ContentInfo td {
+	border-color : #b2b2b2;
+}
+table#QstnEndConfirm th {
+	color : #ffffff;
+	background-color : #ff6347;
+}
+table.layouter td.navi {
+	background-color : #eeeeee;
+}
+
+ul.reportinfo li,
+ul.restrictterms li,
+ul.absoluteterms li {
+	color : #333366;
+}
+ul.absoluteterms li.attention {
+	color : #ff3300;
+}
+ul.absoluteterms li.tips {
+	color : #1e90ff;
+}
+
+table#ScenarioNavi tr.current {
+	color : #ff3300;
+}
+
+div#WsTitle	{
+	background-color : #FFCC66;
+}
+	div#WsTitle h1,
+	div#WsTitle a:link,
+	div#WsTitle a:visited {
+		color : #003366;
+	}
+div#WsTitle h1 {
+    border-style: solid;
+    border-color: #999999;
+    border-width: 0 0 1px 0;
+}
+div#WsTitle h2.unittitle {
+    border: solid #999999 0;
+    border-width: 0 0 1px 0;
+}
+
+div.preview_area p {
+    color: #C0C0C0;
+}
+
+/*----------------------------------------------------------------------------
+ *
+ *  Tradisional Classes
+ *
+ *---------------------------------------------------------------------------*/
+
+.sidetitle {
+	font-size: 14px;
+	color: #FFFFFF;
+	padding: 2px 0px 2px 10px;
+}
+.sidenav {
+	font-size: 13px;
+	padding: 2px 0px 2px 10px;
+}
+.webclass_title{
+	font-size: 18px;
+	font-weight: bold;
+	padding: 4px 10px 4px 10px;
+}
+.title_head{
+	font-size:14px;
+	margin-right:10px;
+}
+.width100p {
+	width: 100%;
+}
+.width90p {
+	width: 90%;
+}
+.size5		{
+	font-size: 18px;
+}
+.size4		{
+	font-size: 16px;
+}
+.size3		{
+	font-size: 13px;
+}
+.size2		{
+	font-size: 11px;
+}
+.size1		{
+	font-size: 19px;
+}
+/* color definition class */
+.bkgray		{ background-color: #DCDCDC;}
+.bktomato	{ background-color: #FF6347;}
+.bkkhaki	{ background-color: #F0E68C;}
+.bklightgray	{ background-color: #E1E1E1;}
+.white		{
+	color: #FFFFFF;
+}
+.lightgray	{
+	color: #E1E1E1;
+}
+.dimgray	{ color: #696969;}
+.silver		{ color: #C0C0C0;}
+.dark_blue	{ color: #333366;}
+.skyblue	{ color: #1E90FF;}
+.white_moji	{ color: #FFFFFF;}
+.blue_moji	{ color: #0066CC;}
+.red_moji	{ color: #ee0000;}
+.tomato_moji	{ color: #bb5a46;}

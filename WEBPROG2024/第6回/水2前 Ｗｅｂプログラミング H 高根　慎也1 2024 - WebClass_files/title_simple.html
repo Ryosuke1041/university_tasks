@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0229)https://ed24lb.osaka-sandai.ac.jp/webclass/title_simple.php?rnd=87ea5&set_contents_id=b51e98d2de13176c1aff1ce20e052850&language=JAPANESE&content_mode=i&start_from_show_info=true&content_mode=q&hide_note=1&ipodnavi=1&acs_=67c30b8e -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+
+    <link href="./bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="./navi.css">
+<style type="text/css">
+a{ text-decoration: underline; color: #1365b5;} body {
+	color: #000000;
+}
+table th {	
+	background-color: #1365b5;
+}
+
+.bgc_main {
+    background-color: #1365b5;
+    color: #fff;
+}
+.bgc_sub {
+    background-color: #ffcc66;
+}
+
+body.GlNav {
+	background-color : #eeeeee;
+}
+	body.GlNav table {
+		background-color: #1365b5;
+		color : #ffffff;
+	}
+div#AdmMenu h2,
+div#CourseMenu h2 {
+	background-color: #1365b5;
+}
+/*
+div#AdmMenu a:hover,
+div#CourseMenu a:hover {
+	background-color : #ccffcc;
+	color : #992211;
+}
+*/
+ol#GlLvMenu li.disabled,
+ul#PsnMenu li.disabled,
+li#Logout.disabled {
+	color : #eeeeee;
+}
+p#SlaveServerAddr {
+	color : #eeeeee;
+}
+</style>
+
+
+<script type="text/javascript" src="./wcwindow.js.ダウンロード"></script>
+<script type="text/javascript">
+function openMessage(url) {
+    return openMessageWindow(url);
+}
+function docontents() {
+    if (parent.resultmenu) {
+        parent.location.replace(parent.resultmenu.document.jumpto.url.value);
+    } else {
+        parent.location.replace(document.jumpto.url.value);
+    }
+}
+function quitContents() {
+    if (parent.resultmenu) {
+        if (parent.resultmenu.document.jumpto) {
+            parent.location.replace(parent.resultmenu.document.jumpto.url.value);
+        } else {
+            parent.location.replace(parent.resultmenu.document.jumpto_illegal.url.value);
+        }
+    } else if (parent.answer && parent.answer.document.answer_form) {
+        if (parent.answer.document.answer_form.continuebutton) {
+            alert('現在はこの教材を終了できません');
+        } else {
+            parent.answer.gradeAndClose();
+        }
+    } else if (parent.webclass_chapter && parent.webclass_chapter.quit) {
+        parent.webclass_chapter.quit();
+    } else if (parent.webclass_chapter &&
+                        parent.webclass_chapter.document.menu.sendCmd) {
+        parent.webclass_chapter.document.menu.sendCmd.value = 'quit';
+        parent.webclass_chapter.document.menu.submit();
+    } else if (parent.contentsInfo) {
+        if (parent.contentsInfo.document.info) {
+            parent.contentsInfo.document.info.giveup.click();
+        } else {
+            parent.contentsInfo.document.endmsg.quit.click();
+        }
+    } else if (parent.forum) {
+        parent.location.replace("do_contents.php?set_contents_id=b51e98d2de13176c1aff1ce20e052850&acs_=8201e6db");
+    } else if (parent.quitContents) {
+        // date or ip error screen
+        parent.quitContents();
+    }
+}
+function printContentsPage() {
+    var targetWindow = null;
+    if(parent.forum) {
+        targetWindow = parent.forum;
+    } else if(parent.webclass_content) {
+        targetWindow = parent.webclass_content;
+    } else if(parent.answer) {
+        if(parent.question) {
+            // multi page and print browser
+            targetWindow = parent.question;
+        } else {
+            // single page mode and print question sheet
+            targetWindow = parent.answer;
+        }
+    } else if(parent.sco && parent.sco.scoView) {
+        targetWindow = parent.sco.scoView;
+    } else if(parent.sco.ELECOA_MAIN) {
+        targetWindow = parent.sco.ELECOA_MAIN;
+    }
+
+    if (targetWindow) {
+        targetWindow.focus();
+        targetWindow.print();
+    }
+}
+
+function showTextbookContent() {
+    if (parent.webclass_chapter && parent.webclass_chapter.showTOC) {
+        parent.webclass_chapter.showTOC();
+    }
+}
+function clickBookmark() {
+    if (parent.webclass_chapter && parent.webclass_chapter.clickBookmark) {
+        parent.webclass_chapter.clickBookmark();
+    }
+}
+function bookmarkContents() {
+    if (parent.answer) {
+        parent.answer.bookmarkAndClose();
+    } else if (parent.webclass_chapter) {
+        clickBookmark();
+    } else if (parent.contentsInfo) {
+        parent.contentsInfo.document.info.bookmark.click();
+    }
+}
+function moveToPrevPage() {
+    // Textbook のみ
+    if (parent.webclass_chapter && parent.webclass_chapter.prevPage) {
+        parent.webclass_chapter.prevPage();
+    } else {
+        alert(document.msg.nopreviouspage.value);
+    }
+}
+function moveToNextPage() {
+    // Textbook のみ
+    if (parent.webclass_chapter && parent.webclass_chapter.nextPage) {
+        parent.webclass_chapter.nextPage();
+    } else {
+        alert(document.msg.nonextpage.value);
+    }
+}
+var timer = 1440000;
+function ReloadTitle(){
+    window.location.replace(document.msg.url.value);
+}
+setTimeout(ReloadTitle, timer);
+	function openHelp(file_name) {
+		w = window.open(file_name, "HelpWindow", "toolbar=yes, location=no,directories=no,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=1000,height=600");
+		w.window.focus();
+	}
+</script>
+
+    <style>
+        ul#PsnMenu a:link {
+            color: #555;
+        }
+    </style>
+  <title>UpperNavi - WebClass</title>
+</head>
+
+<body class="GlNav">
+
+<div id="PageBody">
+<form name="msg" method="POST">
+<table>
+<tbody><tr>
+  <td style="background-color: #e7e7e7; color: #595959; padding: 0.5em;" width="50" align="center" nowrap=""> 教材 </td>
+  <td height="29" style="padding: 0.5em; padding-top: 1em; background-color: #f9f9f9">
+    <ul id="ContentQuitMenu">
+    <li><input type="button" name="quit_contents" value="終了" onclick="javascript:quitContents()" class="btn btn-default"></li>    </ul>
+  </td>
+  <td height="10" align="right" style="background-color: #f9f9f9">
+    <input type="hidden" name="url" value="title_simple.php?rnd=3ad3f&amp;set_contents_id=b51e98d2de13176c1aff1ce20e052850&amp;language=JAPANESE&amp;content_mode=q&amp;start_from_show_info=true&amp;hide_note=1&amp;ipodnavi=1&amp;acs_=67c30b8e&amp;reloaded=0">
+    <input type="hidden" name="nopreviouspage" value="これより前のページはありません。">
+    <input type="hidden" name="nonextpage" value="これより後のページはありません。">
+    <input type="hidden" name="set_contents_id" value="b51e98d2de13176c1aff1ce20e052850">
+
+  </td>
+  <td align="right" style="background-color: #f9f9f9">
+    <ul id="PsnMenu"></ul>  </td>
+</tr></tbody></table>
+</form>
+</div>
+
+<form name="jumpto"><input type="hidden" name="url" value="login.php?acs_=8201e6db"></form>
+
+</body></html>

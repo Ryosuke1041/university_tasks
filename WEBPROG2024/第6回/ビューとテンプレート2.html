@@ -1,0 +1,536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0133)https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ビューとテンプレート2</title>
+
+<script type="text/javascript" src="./ビューとテンプレート2_files/jquery.min.js.ダウンロード"></script>
+<style>
+body { font:100% Verdana,Tahoma,Arial,sans-serif; }
+pre { margin-left:30px; font-size: large; padding: 1em; background-color: #fff;
+ border: 1px solid #ccc; overflow: auto; white-space: pre-wrap; word-wrap: break-word; font-family: Courier, monospace;}
+code {font-size: large; font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",san-serif; }
+
+table,th,td {border: 1px solid #ccc;}
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="ビューとテンプレート2"></a>
+<h1>ビューとテンプレート2<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%93%E3%83%A5%E3%83%BC%E3%81%A8%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%882" class="wiki-anchor">¶</a></h1>
+
+<ul class="toc"><li><strong>目次</strong></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%93%E3%83%A5%E3%83%BC%E3%81%A8%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%882">ビューとテンプレート2</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E5%89%8D%E5%9B%9E%E3%81%AE%E5%BE%A9%E7%BF%92">前回の復習</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%A8%E3%81%AF">テンプレートとは</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E7%99%BB%E9%8C%B2">アプリケーションの登録</a><ul><li><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_appdjango_appsettingspy">django_app/django_app/settings.py</a></li></ul>
+</li></ul>
+</li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E4%BD%9C%E6%88%90">テンプレートファイルの作成</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%AE%E5%A0%B4%E6%89%80">テンプレートの場所</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#indexhtml%E3%81%AE%E4%BD%9C%E6%88%90">index.htmlの作成</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellotemplateshelloindexhtml">django_app/hello/templates/hello/index.html</a></li></ul>
+</li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#urlpatterns%E3%81%AE%E4%BF%AE%E6%AD%A3">urlpatternsの修正</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_appdjango_appurlspy">django_app/django_app/urls.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellourlspy">django_app/hello/urls.py</a></li></ul>
+</li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#index%E9%96%A2%E6%95%B0%E3%81%AE%E4%BF%AE%E6%AD%A3">index関数の修正</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphelloviewspy">django_app/hello/views.py</a></li></ul>
+</li></ul>
+</li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%AB%E5%80%A4%E3%82%92%E6%B8%A1%E3%81%99%E3%81%AB%E3%81%AF">テンプレートに値を渡すには</a><ul><li><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellotemplateshelloindexhtml-2">django_app/hello/templates/hello/index.html</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphelloviewspy-2">django_app/hello/views.py</a></li></ul>
+</li></ul>
+</li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E8%A4%87%E6%95%B0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E7%A7%BB%E5%8B%95">複数ページの移動</a><ul><li><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellotemplateshelloindexhtml-3">django_app/hello/templates/hello/index.html</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphelloviewspy-3">django_app/hello/views.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellourlspy-2">django_app/hello/urls.py</a></li></ul>
+</li></ul>
+</li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E9%9D%99%E7%9A%84%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E5%88%A9%E7%94%A8">静的ファイルの利用</a><ul><li><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellostatichellocssstylecss">django_app/hello/static/hello/css/style.css</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellotemplateshelloindexhtml-4">django_app/hello/templates/hello/index.html</a></li></ul>
+</li></ul>
+</li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%A8%E3%81%AF">フォームとは</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AE%E7%94%A8%E6%84%8F">フォームの用意</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellotemplateshelloindexhtml-5">django_app/hello/templates/hello/index.html</a></li></ul>
+</li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AE%E9%80%81%E4%BF%A1%E5%85%88">フォームの送信先</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#CSRF%E5%AF%BE%E7%AD%96">CSRF対策</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%93%E3%83%A5%E3%83%BC%E9%96%A2%E6%95%B0%E3%81%AE%E4%BD%9C%E6%88%90">ビュー関数の作成</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphelloviewspy-4">django_app/hello/views.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellourlspy-3">django_app/hello/urls.py</a></li></ul>
+</li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#Django%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E6%A9%9F%E8%83%BD">Djangoのフォーム機能</a><ul><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphelloformspy">django_app/hello/forms.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphelloviewspy-5">django_app/hello/views.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellotemplateshelloindexhtml-6">django_app/hello/templates/hello/index.html</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellourlspy-4">django_app/hello/urls.py</a></li><li><a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellotemplateshelloindexhtml-as_table%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9F%E4%BE%8B">django_app/hello/templates/hello/index.html (as_tableを利用した例)</a></li></ul></li></ul></li></ul></li></ul>
+
+<a name="前回の復習"></a>
+<h2>前回の復習<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E5%89%8D%E5%9B%9E%E3%81%AE%E5%BE%A9%E7%BF%92" class="wiki-anchor">¶</a></h2>
+
+<p>Djangoでは </p>
+
+<ul>
+<li>MVCアーキテクチャ → MTV</li>
+<li>Webアプリケーションのサイト → プロジェクト</li>
+<li>Webアプリケーション内の各機能 → アプリケーション</li>
+</ul>
+
+<a name="テンプレートとは"></a>
+<h2>テンプレートとは<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%A8%E3%81%AF" class="wiki-anchor">¶</a></h2>
+
+<p>これまでの例のように、ビュー関数でHttpResponseオブジェクトを返すことでごく簡単な文字列を表示させることはできたが、より複雑なWebページを作成するにはテンプレートを利用する。<br>
+テンプレートはHTMLをベースとしたファイルで、中に変数や処理 (テンプレート言語) を埋め込むことができる。</p>
+
+<p><span class="drawioDiagram" style="cursor:pointer" title="Double click to edit diagram" ondblclick="editDiagram($(this).find(&#39;svg&#39;)[0],&#39;fig2_2.svg&#39;,false, &#39;&#39;, &#39;fig2_1.svg&#39;);"><svg style="max-width:100%" preserve_aspect_ratio="xMaxYMax meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="431px" height="441px" viewBox="-0.5 -0.5 431 441" content="&lt;mxfile host=&quot;embed.diagrams.net&quot; modified=&quot;2021-10-30T01:05:06.920Z&quot; agent=&quot;5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Safari/605.1.15&quot; version=&quot;15.6.2&quot; etag=&quot;TNpcO2WmlMUfUKDV5A8m&quot; type=&quot;embed&quot;&gt;&lt;diagram name=&quot;Page-1&quot; id=&quot;0&quot;&gt;5Vldb9owFP01kbaHoTgmIXkE2q4Pq1S1m7Y9psQNVkOcOqbAfv3s2CZxHAq0fFTqC7q+/j7nOL7XOHA8W36ncTG9IQnKHM9Nlg68cDwvcvv8VzhW0uH3XelIKU6kC9SOe/wPKaduNscJKo2GjJCM4cJ0TkieowkzfDGlZGE2eySZOWsRp8hy3E/izPb+xgmbSm/oBbX/GuF0qmcGQSRrHuLJU0rJPFfz5SRHsmYW62HUHstpnJBFwwUvHTimhDBpzZZjlAlUNWKy39WG2vWSKcrZLh2gO5BdXuJsrvatVsZWGohqK0j0cB04WkwxQ/dFPBG1C848903ZLOMlwE01HKIMLTcuCqy3ysWDyAwxuuJNdAdf9ljpogJrUbPQh8o3bTAAtTNWzKfroWsIuKFQ2IRIaCNyCZ0QOlGgjGFUGZ4zDJQxCl5BDZwGtYFrwNa3UQNeB2rBQUCLLNB+3f1QcIUDDRfUcEUaUqDbQG1oD2/sBRlf5OiBcisV1pxmZa9YnV+hLaxBeEqw9QfSOLMSqkfCN9CEJnieE13xray+sUPeAITFsq7U8GpSNBdDXxmjsc2F9vDlylml+wWjxYfkCLon5Qhs/66iPBmKe4qXJllclnhigmAiJkBWlyQIeRktMfsj6nqer4p/VUdhXyxVv6qwUgW5BpRYN18LVb5OMqcTZHwTbagbUPodSGofRVnM8Is5Zxe8aoZbgisZKyY9t3XaQIshuVbVq3nbbRto0BqIxTRFzBqoYnu97R0F4B1dADlfjVTAwNfltQREodZAVdpfBBKPjyGCYAt3O4ugPVBbTYcUATyhCPoeaKrA7fEA/HUhVKVbRDHfE6J7quNcQgBR1POBQeE61tlXC2KsftR9TRxDDv1jy+Gjk+f5FnkW4DsfZHssSwiHJM+3yKPoeY5KZsdGX64ZK+5k7VeLYh7TMJPUklHyhMYkI+IUVvki5xZnWcsVZzjNhTI4m+LAjkSEhHnKOlQVM5wkYprO+GoX6bwv5Grdr+tPbUNcQYe4DpK3gcDiR7JQFiQv0edhAZ6VhY73BJVMDHUWeKWNsJ0OhuHnoSnaEIY00xP3aDRtfOQYjq0c/UJngY30/dPQ5LVT/ZPypPPTjam+mYsfJP0PA5NvroCBKY7qQaA+sZ3vAPaleP3zRr8IRb7+BABt9PUUHT03TnHmJwbYeqmEUWBr42hPDJ795mYhIp6hi407VS/n8YNu7u59OkLzdMCOu+a1cPJ9ANg3vgXA0cNpRcObA+rdY2e/BfWbH0HMfgcMkb0d/kxoEKIugD1y3eQKi9mr2pIvnNncVm7VDHw0CqFJYXuArRSuDkwhL9b/Ncnm9V958PI/&lt;/diagram&gt;&lt;/mxfile&gt;"><defs></defs><g><rect x="0" y="110" width="430" height="330" fill="#ffffff" stroke="#000000" pointer-events="all"></rect><rect x="155" y="0" width="120" height="60" rx="9" ry="9" fill="#ffffff" stroke="#000000" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignobject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 30px; margin-left: 156px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;">ブラウザ</div></div></div></foreignobject><text x="215" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">ブラウザ</text></switch></g><rect x="155" y="140" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignobject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 170px; margin-left: 156px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;">URLディスパッチャ<br>urls.py</div></div></div></foreignobject><text x="215" y="174" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">URLディスパッチャ...</text></switch></g><rect x="155" y="260" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignobject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 290px; margin-left: 156px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;"><font style="font-size: 18px">ビュー<br></font>views.py</div></div></div></foreignobject><text x="215" y="294" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">ビュー
+views.py</text></switch></g><path d="M 185 60 L 185 123.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path><path d="M 185 128.88 L 181.5 121.88 L 185 123.63 L 188.5 121.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path><path d="M 245 130 L 245 66.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path><path d="M 245 61.12 L 248.5 68.12 L 245 66.37 L 241.5 68.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path><path d="M 184.51 200 L 184.49 253.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path><path d="M 184.49 258.88 L 180.99 251.88 L 184.49 253.63 L 187.99 251.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path><path d="M 244.51 260 L 244.51 206.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path><path d="M 244.51 201.12 L 248.01 208.12 L 244.51 206.37 L 241.01 208.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path><rect x="85" y="220" width="60" height="30" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignobject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 235px; margin-left: 86px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;">request<br>(HttpRequest)</div></div></div></foreignobject><text x="115" y="240" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">request...</text></switch></g><rect x="285" y="220" width="60" height="30" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignobject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 235px; margin-left: 286px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;">HttpResponse</div></div></div></foreignobject><text x="315" y="240" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">HttpRes...</text></switch></g><rect x="75" y="70" width="100" height="30" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignobject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 98px; height: 1px; padding-top: 85px; margin-left: 76px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;">リクエスト</div></div></div></foreignobject><text x="125" y="90" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">リクエスト</text></switch></g><rect x="255" y="70" width="100" height="30" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignobject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 98px; height: 1px; padding-top: 85px; margin-left: 256px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 18px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;">レスポンス</div></div></div></foreignobject><text x="305" y="90" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">レスポンス</text></switch></g><rect x="300" y="356" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignobject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 386px; margin-left: 301px;"><div style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal;"><font><font style="font-size: 18px">テンプレート</font><br>HTMLファイル<br></font></div></div></div></foreignobject><text x="360" y="390" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">テンプレートHTMLファイル...</text></switch></g><path d="M 315 350 L 289.5 324.5" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"></path><path d="M 285.79 320.79 L 293.22 323.27 L 289.5 324.5 L 288.27 328.22 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"></path><path d="M 290.5 365.5 L 265 340" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"></path><path d="M 294.21 369.21 L 286.78 366.73 L 290.5 365.5 L 291.73 361.78 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"></path></g><switch><g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"></g><a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank"><text text-anchor="middle" font-size="10px" x="50%" y="100%">Viewer does not support full SVG 1.1</text></a></switch></svg></span></p>
+
+<a name="アプリケーションの登録"></a>
+<h2>アプリケーションの登録<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E7%99%BB%E9%8C%B2" class="wiki-anchor">¶</a></h2>
+
+<p>前回までのように views.pyのindex関数に直接文字列を設定して表示する場合には不要であったが、本来はsettings.pyにアプリケーションの登録が必要となる。INSTALLED_APPSの先頭に、以下のように1行追加する。 指定の仕方は、<strong>(アプリケーション名).apps.(先頭大文字アプリケーション名)Config</strong>とする。<br>
+helloアプリケーションの場合、<code>"hello.apps.HelloConfig"</code>となる。("hello"とする書き方もある)</p>
+
+<a name="django_appdjango_appsettingspy"></a>
+<h4>django_app/django_app/settings.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_appdjango_appsettingspy" class="wiki-anchor">¶</a></h4>
+<pre><code># 33行目から 
+INSTALLED_APPS = [
+    'hello.apps.HelloConfig',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+</code></pre>
+<a name="テンプレートファイルの作成"></a>
+<h2>テンプレートファイルの作成<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E4%BD%9C%E6%88%90" class="wiki-anchor">¶</a></h2>
+
+<a name="テンプレートの場所"></a>
+<h3>テンプレートの場所<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%AE%E5%A0%B4%E6%89%80" class="wiki-anchor">¶</a></h3>
+
+<p>テンプレートファイルをおく場所は、いくつか流儀があるが、この講義では以下の場所に置くことにする。templatesディレクトリの下にもさらにhelloディレクトリを作成していることに注意。</p>
+<pre><code>django_app/hello/templates/hello/
+</code></pre>
+<a name="indexhtmlの作成"></a>
+<h3>index.htmlの作成<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#indexhtml%E3%81%AE%E4%BD%9C%E6%88%90" class="wiki-anchor">¶</a></h3>
+
+<p>テンプレートファイル index.htmlを作成する。この段階では通常のHTMLファイルとなっている。</p>
+
+<a name="django_apphellotemplateshelloindexhtml"></a>
+<h4>django_app/hello/templates/hello/index.html<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellotemplateshelloindexhtml" class="wiki-anchor">¶</a></h4>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;hello&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;hello/index&lt;/h1&gt;
+  &lt;p&gt;これはサンプルページです&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<a name="urlpatternsの修正"></a>
+<h3>urlpatternsの修正<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#urlpatterns%E3%81%AE%E4%BF%AE%E6%AD%A3" class="wiki-anchor">¶</a></h3>
+
+<p>ルーティングの設定を行う。ここでは hello/を省略した場合は hello/にリダイレクトさせるように(django_app/urls.py 18, 23行目)、 hello/でアクセスしてきた場合には views.pyのindex関数を呼び出すように(hello/urls.py)、それぞれのurls.pyを設定する。</p>
+
+<a name="django_appdjango_appurlspy"></a>
+<h4>django_app/django_app/urls.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_appdjango_appurlspy" class="wiki-anchor">¶</a></h4>
+<pre><code># 16行目から
+from django.contrib import admin
+from django.urls import path, include
+from django.views.generic import RedirectView
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('hello/', include('hello.urls')),
+    path('', RedirectView.as_view(url='/hello/')),
+]
+</code></pre>
+<a name="django_apphellourlspy"></a>
+<h4>django_app/hello/urls.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellourlspy" class="wiki-anchor">¶</a></h4>
+<pre><code>from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+</code></pre>
+<a name="index関数の修正"></a>
+<h3>index関数の修正<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#index%E9%96%A2%E6%95%B0%E3%81%AE%E4%BF%AE%E6%AD%A3" class="wiki-anchor">¶</a></h3>
+
+<p>views.pyのindex関数を修正して、テンプレートファイルの内容を表示するようにする。render関数の第2引数にtemplatesディレクトリからの相対パスでテンプレートファイルを指定する。</p>
+
+<a name="django_apphelloviewspy"></a>
+<h4>django_app/hello/views.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphelloviewspy" class="wiki-anchor">¶</a></h4>
+<pre><code>from django.shortcuts import render
+from django.http import HttpResponse
+
+def index(request):
+    return render(request, 'hello/index.html')
+</code></pre>
+<p>開発用サーバを立ち上げてブラウザで確認 ( <a href="http://localhost:8000/hello/">http://localhost:8000/hello/</a> )する。</p>
+
+<p><img src="./ビューとテンプレート2_files/clipboard-202205242214-c0ib2.png" alt="" width="90%" loading="lazy"></p>
+
+<a name="テンプレートに値を渡すには"></a>
+<h2>テンプレートに値を渡すには<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%AB%E5%80%A4%E3%82%92%E6%B8%A1%E3%81%99%E3%81%AB%E3%81%AF" class="wiki-anchor">¶</a></h2>
+
+<p>次にテンプレートにビューからの値を渡して表示してみる。以下のようにindex.htmlを書き換える。<br>
+ここでは {{title}}と{{msg}}の２つの変数を埋め込んでいる。</p>
+
+<a name="django_apphellotemplateshelloindexhtml-2"></a>
+<h4>django_app/hello/templates/hello/index.html<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellotemplateshelloindexhtml-2" class="wiki-anchor">¶</a></h4>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;{{title}}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;{{title}}&lt;/h1&gt;
+  &lt;p&gt;{{msg}}&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>次にビュー関数 (index関数)を修正する。</p>
+
+<a name="django_apphelloviewspy-2"></a>
+<h4>django_app/hello/views.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphelloviewspy-2" class="wiki-anchor">¶</a></h4>
+<pre><code># 4行目から
+def index(request):
+    params = {
+        'title': 'Hello/Index',
+        'msg':'テンプレートで作ったページです。',
+    }
+    return render(request, 'hello/index.html', params)
+</code></pre>
+<p>ここまで修正できたら、サーバを立ち上げてブラウザで確認してみる。<br>
+<img src="./ビューとテンプレート2_files/clipboard-202205242217-e5edh.png" alt="" width="90%" loading="lazy"></p>
+
+<a name="複数ページの移動"></a>
+<h2>複数ページの移動<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E8%A4%87%E6%95%B0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E7%A7%BB%E5%8B%95" class="wiki-anchor">¶</a></h2>
+
+<p>上ではテンプレートで１つのページを表示させたが、もちろん複数のページを用意することも可能である。ここでは index.htmlを使って2つのページを表示させてみる。<br>
+まずはテンプレートファイルを修正する。body部分の一番最後に<code>&lt;a&gt;</code>タグによるリンクを追加する。</p>
+
+<a name="django_apphellotemplateshelloindexhtml-3"></a>
+<h4>django_app/hello/templates/hello/index.html<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellotemplateshelloindexhtml-3" class="wiki-anchor">¶</a></h4>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;{{title}}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;{{title}}&lt;/h1&gt;
+  &lt;p&gt;{{msg}}&lt;/p&gt;
+  &lt;p&gt;&lt;a href="{% url goto %}"&gt;{{goto}}&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>次にビュー関数を作成する。以下の例のように、複数の関数を用意することで、１つのテンプレートから複数のページを作成することができる。ここではリンク先を表すgotoを新たに設定している。</p>
+
+<a name="django_apphelloviewspy-3"></a>
+<h4>django_app/hello/views.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphelloviewspy-3" class="wiki-anchor">¶</a></h4>
+<pre><code>from django.shortcuts import render
+from django.http import HttpResponse
+
+def index(request):
+    params = {
+        'title':'Hello/Index',
+        'msg':'テンプレートで作ったページです。',
+        'goto':'next',
+    }
+    return render(request, 'hello/index.html', params)
+
+def next(request):
+    params = {
+        'title':'Hello/Next',
+        'msg':'テンプレートで作ったもう一つのページです。',
+        'goto':'index',
+    }
+    return render(request, 'hello/index.html', params)
+</code></pre>
+<p>最後に2ページ目のpathを設定しておく。</p>
+
+<a name="django_apphellourlspy-2"></a>
+<h4>django_app/hello/urls.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellourlspy-2" class="wiki-anchor">¶</a></h4>
+<pre><code>from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('next/', views.next, name='next'),
+]
+</code></pre>
+<p><img src="./ビューとテンプレート2_files/clipboard-202205242220-zclyq.png" alt="" width="90%" loading="lazy"><br>
+<img src="./ビューとテンプレート2_files/clipboard-202205242220-yhlxz.png" alt="" width="90%" loading="lazy"></p>
+
+<p>テンプレートファイルの <code>{% ... %}</code>の部分は、テンプレートタグと呼ばれ、{% url 名前 %}と指定することで、urls.py内 urlpatternsのpath関数の第3引数 <code>name=</code> で設定していたパス名を指定できる。今回の例では、それぞれのビュー関数のparams['goto'] で設定しているので、例えば index関数が呼び出された場合には、 {% url 'next' %} として実行されることになる。</p>
+
+<a name="静的ファイルの利用"></a>
+<h2>静的ファイルの利用<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E9%9D%99%E7%9A%84%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E5%88%A9%E7%94%A8" class="wiki-anchor">¶</a></h2>
+
+<p>テンプレートファイル内でスタイルシートやJavaScriptファイル、画像ファイルなどを読み込んで利用することもできる。これらのファイルは静的ファイルと呼び、staticディレクトリの下に以下のような構成で配置される。</p>
+<pre><code>(アプリケーション名)/static/(アプリケーション名)/css/     #スタイルシート　　
+(アプリケーション名)/static/(アプリケーション名)/js/      #JavaScriptファイル  
+(アプリケーション名)/static/(アプリケーション名)/img/     #画像ファイル
+</code></pre>
+<p>ここでは例として、cssファイルを作成して配置してみる。</p>
+
+<a name="django_apphellostatichellocssstylecss"></a>
+<h4>django_app/hello/static/hello/css/style.css<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellostatichellocssstylecss" class="wiki-anchor">¶</a></h4>
+<pre><code>body {
+    color:blue;
+    font-size:20pt;
+}
+h1 {
+    color:white;
+    background:navy;
+}
+</code></pre>
+<p>このスタイルシートファイルを利用するためにテンプレートファイルも以下のように修正する。</p>
+
+<a name="django_apphellotemplateshelloindexhtml-4"></a>
+<h4>django_app/hello/templates/hello/index.html<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellotemplateshelloindexhtml-4" class="wiki-anchor">¶</a></h4>
+<pre><code>{% load static %}
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;{{title}}&lt;/title&gt;
+  &lt;link rel="stylesheet" type="text/css"
+      href="{% static 'hello/css/style.css' %}" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;{{title}}&lt;/h1&gt;
+  &lt;p&gt;{{msg}}&lt;/p&gt;
+  &lt;p&gt;&lt;a href="{% url goto %}"&gt;{{goto}}&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>1行目に追加したテンプレートタグは、テンプレートファイルで静的ファイルを扱うことを表す。また、実際のファイルの読み込みは {% static %} テンプレートタグで行う。JavaScriptファイルや画像も同じようにしてこれらのテンプレートタグを使って埋め込むことができる。</p>
+
+<p><img src="./ビューとテンプレート2_files/clipboard-202205242223-mpoow.png" alt="" width="90%" loading="lazy"></p>
+
+<a name="フォームとは"></a>
+<h2>フォームとは<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%A8%E3%81%AF" class="wiki-anchor">¶</a></h2>
+
+<p>実際のWebアプリケーションでは、クエリーパラメータやURLで直接値を渡すよりも、フォームを使って値を渡す方が一般的である。フォームはHTMLの<code>&lt;form&gt;</code>タグを用いる。HTML標準で用意されているタグで作成することもできるが、Djangoにはフォーム機能(Formクラス)が用意されており、便利に扱えるようになっている。</p>
+
+<a name="フォームの用意"></a>
+<h3>フォームの用意<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AE%E7%94%A8%E6%84%8F" class="wiki-anchor">¶</a></h3>
+
+<p>index.htmlを以下のように変更する。まずはHTML標準のformタグを使った例。</p>
+
+<a name="django_apphellotemplateshelloindexhtml-5"></a>
+<h4>django_app/hello/templates/hello/index.html<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellotemplateshelloindexhtml-5" class="wiki-anchor">¶</a></h4>
+<pre><code>{% load static %}
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;{{title}}&lt;/title&gt;
+  &lt;link rel="stylesheet" type="text/css"
+      href="{% static 'hello/css/style.css' %}" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;{{title}}&lt;/h1&gt;
+  &lt;p&gt;{{msg}}&lt;/p&gt;
+  &lt;form action ="{% url 'form' %}" method="post"&gt;
+    {% csrf_token %}
+    &lt;label for="msg"&gt;name:&lt;/label&gt;
+    &lt;input id="msg" type="text" name="msg"&gt;
+    &lt;input type="submit" value="click"&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<a name="フォームの送信先"></a>
+<h3>フォームの送信先<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AE%E9%80%81%E4%BF%A1%E5%85%88" class="wiki-anchor">¶</a></h3>
+
+<p>上のindex.htmlでは、formタグ内で <code>action="{% url 'form' %}"</code> でフォームの送信先を指定している。実際のアドレスは urlpatternsで指定された name = 'form'のアドレスとなる。</p>
+
+<a name="CSRF対策"></a>
+<h3>CSRF対策<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#CSRF%E5%AF%BE%E7%AD%96" class="wiki-anchor">¶</a></h3>
+
+<p>14行目<code>{% csrf_token %}</code>は、CSRF対策のためのトークン生成の部分。フォームを扱うページでは、外部サイトから不正に大量のフォームデータを送りつけられる CSRF (Cross-Site Request Forgeries) 攻撃の可能性があるが、これを防ぐために必要な処理。</p>
+
+<a name="ビュー関数の作成"></a>
+<h3>ビュー関数の作成<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#%E3%83%93%E3%83%A5%E3%83%BC%E9%96%A2%E6%95%B0%E3%81%AE%E4%BD%9C%E6%88%90" class="wiki-anchor">¶</a></h3>
+
+<a name="django_apphelloviewspy-4"></a>
+<h4>django_app/hello/views.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphelloviewspy-4" class="wiki-anchor">¶</a></h4>
+<pre><code>from django.shortcuts import render
+from django.http import HttpResponse
+
+def index(request):
+    params = {
+        'title': 'Hello/Index',
+        'msg': '名前を入力してください', 
+    }
+    return render(request, 'hello/index.html', params)
+
+def form(request):
+    msg = request.POST['msg']
+    params = {
+        'title': 'Hello/Form',
+        'msg': 'ようこそ、' + msg + 'さん。',
+    }
+    return render(request, 'hello/index.html', params)
+</code></pre>
+<p>ブラウザからアクセスしたときの処理は index関数であり、フォーム送信の際には form関数が呼び出される。form関数では POSTで処理している。<br>
+最後に、helloディレクトリの下にのurls.pyを以下のように修正する。</p>
+
+<a name="django_apphellourlspy-3"></a>
+<h4>django_app/hello/urls.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellourlspy-3" class="wiki-anchor">¶</a></h4>
+<pre><code>from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('form',views.form, name='form'),
+]
+</code></pre>
+<p><img src="./ビューとテンプレート2_files/clipboard-202205242227-cflxz.png" alt="" width="90%" loading="lazy"><br>
+<img src="./ビューとテンプレート2_files/clipboard-202205242227-qdud7.png" alt="" width="90%" loading="lazy"></p>
+
+<a name="Djangoのフォーム機能"></a>
+<h3>Djangoのフォーム機能<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#Django%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E6%A9%9F%E8%83%BD" class="wiki-anchor">¶</a></h3>
+
+<p>次にDjangoのフォーム作成機能を使って、フォームを作成してみる。手順としては、まずFormクラスを継承したクラスを作成し、そこにフォームの内容を定義しておく。そしてこれをテンプレートに変数として渡す。そうすると、出力されるときにフォームが自動生成されるようになる。</p>
+
+<p>まずはフォーム用のファイル forms.pyをhelloディレクトリの下に新規作成する。そして、ここにFormクラスを継承した HelloFormクラスを定義する。</p>
+
+<a name="django_apphelloformspy"></a>
+<h4>django_app/hello/forms.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphelloformspy" class="wiki-anchor">¶</a></h4>
+<pre><code>from django import forms
+
+class HelloForm(forms.Form):
+    name = forms.CharField(label='name')
+    mail = forms.CharField(label='mail')
+    age = forms.IntegerField(label='age')
+</code></pre>
+<p>ここで forms.CharFieldはテキストを入力する一般的なフィールドクラス、forms.IntegerFieldは整数値を入力するためのフィールドクラス。label=の部分はラベル名で、これを指定することで各フィールドの手前にラベルのテキストが表示されるようになる。</p>
+
+<p>次にビュー関数をHelloFormを利用する形で定義する。</p>
+
+<a name="django_apphelloviewspy-5"></a>
+<h4>django_app/hello/views.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphelloviewspy-5" class="wiki-anchor">¶</a></h4>
+<pre><code>from django.shortcuts import render
+from django.http import HttpResponse
+from .forms import HelloForm
+
+def index(request):
+    params = {
+        'title':'Hello',
+        'message':'Your Data',
+        'form': HelloForm(),
+    }
+
+    if request.method == 'POST':
+        params['message'] = '名前: ' + request.POST['name'] + \
+            '&lt;br&gt;メール: ' + request.POST['mail'] + \
+            '&lt;br&gt;年齢: ' + request.POST['age']
+        params['form'] = HelloForm(request.POST)
+
+    return render(request, 'hello/index.html', params)
+</code></pre>
+<p>上のindex関数では、GETとPOSTの両方の処理を行っている。12行目のrequest.methodでPOST送信されたかをチェックして、POST送信時の処理を行うようにしている。</p>
+
+<p>以前説明したように、HTTPではデータのやりとりを行う際にGETもしくはPOSTメソッドが利用される。それぞれ、以下のような処理となる。ブラウザにURLを指定したり、リンクをクリックしたりすると、GETメソッドでリクエストが送られる。</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">method名</th>
+<th style="text-align: left">説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">GET</td>
+<td style="text-align: left">用意されているデータを取り出す処理</td>
+</tr>
+<tr>
+<td style="text-align: left">POST</td>
+<td style="text-align: left">新しいデータを作って受け取るような処理</td>
+</tr>
+</tbody></table>
+
+<p>フォーム送信の場合は、GETまたはPOSTが使える。GETでは データはURLの最後の部分に追加される。POSTはHTTPヘッダの後にデータが書き込まれてサーバ側に渡される。</p>
+
+<p>テンプレートファイルを次のように修正する。</p>
+
+<a name="django_apphellotemplateshelloindexhtml-6"></a>
+<h4>django_app/hello/templates/hello/index.html<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellotemplateshelloindexhtml-6" class="wiki-anchor">¶</a></h4>
+<pre><code>{% load static %}
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;{{title}}&lt;/title&gt;
+  &lt;link rel="stylesheet" type="text/css"
+      href="{% static 'hello/css/style.css' %}" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;{{title}}&lt;/h1&gt;
+  &lt;p&gt;{{message|safe}}&lt;/p&gt;
+  &lt;form action="{% url 'index' %}" method="post"&gt;
+      {% csrf_token %}
+      {{ form }}
+      &lt;input type="submit" value="click"&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>ポイントは、15行目の<code>{{ form }}</code>の部分で、ここにフォームの具体的な内容が挿入される。また、12行目の<code>{{message|safe}}</code>の safe は HTMLタグをエスケープ処理せずにそのまま書き出すという指示になる。</p>
+
+<p>最後に、urlpatternsを修正して、サーバを立ち上げ、表示を確認する。</p>
+
+<a name="django_apphellourlspy-4"></a>
+<h4>django_app/hello/urls.py<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellourlspy-4" class="wiki-anchor">¶</a></h4>
+<pre><code>from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+</code></pre>
+<p><img src="./ビューとテンプレート2_files/clipboard-202205242233-vkbvz.png" alt="" width="90%" loading="lazy"><br>
+<img src="./ビューとテンプレート2_files/clipboard-202205242233-4cren.png" alt="" width="90%" loading="lazy"></p>
+
+<p><img src="./ビューとテンプレート2_files/clipboard-202011190030-dcsd4.png" alt=""><br>
+<img src="./ビューとテンプレート2_files/clipboard-202011190031-ytkyr.png" alt=""></p>
+
+<p>Djangoのフォームでは、送信した後も入力した内容がフォーム内に残っている。また。値を書かずに送信しようとすると、アラートを表示してくれる。</p>
+
+<p>上の例ではフォームを横に並べただけだが、オプションとして、以下のような機能を利用することもできる。利用方法は、例えばtableの場合、テンプレートの <code>{{ form }}' の部分を</code>{{ form.as_table }}`のように変更し、必要なタグを追加すればよい。</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">オプション</th>
+<th style="text-align: left">生成するタグ</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">《Form》.as_table</td>
+<td style="text-align: left">ラベルとフィールドのタグを<code>&lt;tr&gt;</code>と<code>&lt;td&gt;</code>でくくって書き出す</td>
+</tr>
+<tr>
+<td style="text-align: left">《Form》.as_p</td>
+<td style="text-align: left">ラベルとフィールド全体を<code>&lt;p&gt;</code>でくくる</td>
+</tr>
+<tr>
+<td style="text-align: left">《Form》.as_ul</td>
+<td style="text-align: left">ラベルとフィールド全体を<code>&lt;li&gt;</code>でくくる</td>
+</tr>
+</tbody></table>
+
+<a name="django_apphellotemplateshelloindexhtml-as_tableを利用した例"></a>
+<h4>django_app/hello/templates/hello/index.html (as_tableを利用した例)<a href="https://ed24lb.osaka-sandai.ac.jp/webclass/data/course/c2/C2432100025151/0fa45c32b69f1a980cc4473f1c6d318e/20240515_webprog/index.html#django_apphellotemplateshelloindexhtml-as_table%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9F%E4%BE%8B" class="wiki-anchor">¶</a></h4>
+<pre><code>{% load static %}
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;{{title}}&lt;/title&gt;
+  &lt;link rel="stylesheet" type="text/css"
+      href="{% static 'hello/css/style.css' %}" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;{{title}}&lt;/h1&gt;
+  &lt;p&gt;{{message|safe}}&lt;/p&gt;
+  &lt;table&gt;
+  &lt;form action="{% url 'index' %}" method="post"&gt;
+      {% csrf_token %}
+      {{ form.as_table }}
+     &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;input type="submit" value="click"&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;/form&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><img src="./ビューとテンプレート2_files/clipboard-202205242239-eqtq3.png" alt="" width="90%" loading="lazy"></p>
+
+
+
+</body></html>

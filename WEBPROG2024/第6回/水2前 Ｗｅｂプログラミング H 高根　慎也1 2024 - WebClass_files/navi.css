@@ -1,0 +1,321 @@
+@charset "UTF-8";
+@import url("basestyle.css");
+
+
+/*-------------------------------------
+ *
+ *  BoxStyles
+ *
+ *-------------------------------------*/
+html {
+    min-height: 100%;
+    position: relative;
+}
+body {
+    margin-bottom: 3.5em;
+}
+
+body.GlNav table td {
+	padding : 0px;
+	border-width : 0px;
+}
+
+body.GlNav ol li {
+	margin : 0px;
+	display: inline;
+	list-style : none;
+}
+body.GlNav ul li {
+	display: inline;
+}
+
+ol#PathMenu {
+	padding : 0.2em 0.5em;
+}
+ol#PathMenu a,
+ol#PathMenu li.disabled,
+ol#PathMenu li.current {
+	color: #333333;
+	padding : 0.2em 0.3em;
+}
+ol#PathMenu li.unitname,
+ol#PathMenu li.cname {
+	padding : 0.2em 0.3em;
+}
+
+a#Logout,
+li#Logout.disabled {
+	padding : 0.2em 0.3em;
+}
+ul#PsnMenu {
+	margin-right: 1em;
+	padding : 0em;
+}
+ul#PsnMenu a,
+ul#PsnMenu li.disabled {
+	padding : 0.2em 0.5em;
+}
+
+ul#ContentQuitMenu {
+	margin-left: 0.5em;
+}
+ul#ContentOperationMenu li,
+ul#ContentQuitMenu li {
+	margin-left: 0.5em;
+}
+
+
+div#CourseMenu {
+    padding-top: 0.5em;
+}
+
+div#AdmMenu h2,
+div#CourseMenu h2 {
+	padding-left : 0.8em;
+}
+div#AdmMenu a,
+div#CourseMenu a {
+	margin : 0;
+	padding : 0 .5em 0 1em;
+	display : block;
+	clear:both;
+
+	border-style : dotted;
+	border-width : 0 0 1px 0;
+}
+
+div#AdmMenu .menugroup h2,
+div#CourseMenu .menugroup h2 {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+div#AdmMenu .menugroup li a,
+div#CourseMenu .menugroup  li a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.menugroup {
+    margin-bottom: 0.8em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    border-width: 0;
+}
+.menugroup h2 {
+    border-width: 0;
+}
+
+.menugroup h2:hover {
+    color: #ffa500;
+}
+
+div#WsInfo {
+    margin-top : 1em;
+}
+div#WsInfo ul {
+	margin-bottom : 0.5em;
+	padding-left : 1em;
+}
+div#WsInfo li {
+	display : block;
+}
+
+div#WsDownloads {
+    position: absolute;
+    bottom: 2px;
+    height: 5em;
+    padding-left: 1em;
+    line-height: 1;
+}
+
+div#WsDownloads ul {
+    line-height: 80%;
+    display:flex;
+    justify-content:flex-end;
+    flex-flow: column;
+    height: 97%;
+}
+
+div#WsDownloads li {
+  line-height: 1;
+  display: block;
+}
+
+div#QRCode {
+	width : 120px;
+	margin : 1em auto;
+}
+p#SlaveServerAddr {
+	margin-top : 0.4em;
+}
+/*-------------------------------------
+ *
+ *  Font/Text Styles
+ *
+ *-------------------------------------*/
+
+body.GlNav p.maintenancemsg {
+	font-size : 16px;
+	font-weight : bold;
+}
+ol#PathMenu li.cname {
+	font-weight : bold;
+}
+a#Logout {
+	font-size : 12pt;
+	font-weight : bold;
+}
+div#AdmMenu h2,
+div#CourseMenu h2 {
+	font-size : 13px;
+	font-weight : bold;
+}
+div#AdmMenu a,
+div#CourseMenu a {
+	font-size : 13px;
+	line-height : 1.4em;
+	letter-spacing : 0.1em;
+}
+
+div#AdmMenu .menugroup h2,
+div#CourseMenu .menugroup h2 {
+    line-height: 1.2;
+}
+.menugroup h2:hover {
+    text-decoration: underline;
+}
+
+ul#ContentOperationMenu li input,
+ul#ContentQuitMenu li input {
+	font-size: 88%;
+	letter-spacing: 0;
+}
+
+div#WsInfo li {
+	font-size : 12px;
+}
+
+div#WsDownloads {
+    font-size: 12px;
+}
+div#WsDownloads ul {
+    list-style-type: none;
+}
+
+div#WsDownloads .adm_menu_link {
+  color: #1b1be5;
+}
+
+
+div#QRCode {
+	text-align : center;
+}
+
+p#SlaveServerAddr {
+	font-size : 10pt;
+}
+
+/*-------------------------------------
+ *
+ *  Colors
+ *
+ *-------------------------------------*/
+
+body {
+	background-color : #eeeeee;
+}
+
+body.GlNav {
+	background-color : #999999;
+}
+body.GlNav a:link,
+body.GlNav a:visited {
+	color : #ffffff;
+}
+body.GlNav a:hover {
+	color : #ffa500;
+}
+body.GlNav table {
+	background-color : #0a6cce;
+}
+body.GlNav table.maintenancemode td {
+	background-color : #ff6347;
+}
+body.GlNav p.maintenancemsg {
+	color : #ffffff;
+}
+
+div#AdmMenu h2,
+div#CourseMenu h2 {
+	background-color : #4682B4;
+	color : #ffffff;
+}
+
+div#AdmMenu a:link,
+div#AdmMenu a:visited,
+div#CourseMenu a:link,
+div#CourseMenu a:visited {
+	background-color : #eeeeee;
+	border-color : #cccccc;
+	color : #000000;
+}
+div#AdmMenu a:hover,
+div#CourseMenu a:hover {
+	background-color : #ffffff;
+	color: #992211;
+}
+.menugroup h2 {
+    cursor: pointer;
+    color: #fff;
+}
+div#WsDownloads {
+    color: #333333;
+}
+
+ol#PathMenu {
+	background-color: #999999;
+}
+
+ol#PathMenu a:link,
+ol#PathMenu a:visited,
+ol#PathMenu a:active {
+	color: #ffffff;
+}
+
+a#Logout:link,
+a#Logout:visited,
+ol#PathMenu li.cname,
+ol#PathMenu li.unitname,
+ul#PsnMenu,
+ul#PsnMenu a:link,
+ul#PsnMenu a:visited {
+	color : #ffffff;
+	border-color : #ffffff;
+}
+a#Logout:hover,
+ol#PathMenu a:hover,
+ul#PsnMenu a:hover {
+	background-color : #ffffff;
+	color: #992211;
+}
+ol#PathMenu a:hover {
+	background-color: #eeeeee;
+}
+
+ul#PsnMenu li.disabled,
+li#Logout.disabled {
+	color : #cccccc;
+}
+ol#PathMenu li.disabled {
+	color : #eeeeee;
+}
+
+ol#PathMenu li.current {
+	color: #333333;
+	background-color: #ffffff;
+}
+
+p#SlaveServerAddr {
+	color : #ffffff;
+}
