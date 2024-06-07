@@ -1,4 +1,4 @@
 from django import forms
 
 class HelloForm(forms.Form):
-    id = forms.IntegerField(label='ID')
+    gender = forms.fields.ChoiceField(label='GENDER', choice = ('female', 'male'))
