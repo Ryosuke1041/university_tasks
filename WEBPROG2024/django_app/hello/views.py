@@ -13,7 +13,10 @@ def index(request):
         form = HelloForm(request.POST)
         if form.is_valid():
             gender = form.cleaned_data['gender']
-            params['data'] = Friend.objects.filter(gender=(gender == 'female'))
+            if gender == 'female':
+                params['data'] = Friend.objects.filter(gender=True)  # 'female'をTrueに対応
+            else:
+                params['data'] = Friend.objects.filter(gender=False)  # 'male'をFalseに対応
             params['form'] = form
         else:
             params['data'] = Friend.objects.all()
