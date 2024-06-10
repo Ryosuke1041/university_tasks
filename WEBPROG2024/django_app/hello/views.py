@@ -10,10 +10,13 @@ def index(request):
         'data': [],
     }
     if (request.method == 'POST'):
-        num = request.POST['id']
-        item = Friend.objects.get(id = num)
-        params['data'] = [item]
-        params['form'] = HelloForm(request.POST)
+        form = HelloForm(request.POST)
+        if form.is_valid():
+            gender = form.cleaned_data['gender']
+            params['data'] = Friend.objects.filter(gender=(gender == 'female'))
+            params['form'] = form
+        else:
+            params['data'] = Friend.objects.all()
     else:
         params['data'] = Friend.objects.all()
     return render(request, 'hello/index.html', params)
