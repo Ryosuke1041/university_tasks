@@ -11,10 +11,11 @@
   <h1>{{title}}</h1>
   <p>{{message|safe}}</p>
   <table>
-  <form action="{% url 'index' %}" method="post">
-    {% csrf_token %}
-    {{ form.as_table}}
-  </form>
+    index.htmlのform部分を
+    <form action="{% url 'index' %}" method="post" id="genderForm">
+      {% csrf_token %}
+      {{ form.as_table}}
+    </form>
   </table>
   <table>
     <tr>
@@ -37,5 +38,10 @@
     </tr>
     {% endfor %}
   </table>
+  <script>
+    document.getElementById('id_gender').addEventListener('change', function() {
+        document.getElementById('genderForm').submit();
+    });
+  </script>
 </body>
 </html>
