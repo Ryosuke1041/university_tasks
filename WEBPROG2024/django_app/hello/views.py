@@ -56,6 +56,19 @@ def find(request):
         form = FindForm(request.POST)
         str = request.POST['find']
         data = Friend.objects.filter(name__contains=str)
+        age_range = str.split()
+
+        if len(age_range) == 2:
+            try:
+                min_age = int(age_range[0])
+                max_age = int(age_range[1])
+                data = Friend.objects.filter(age__gte=min_age, age__lt=max_age)
+            except ValueError:
+                data = Friend.objects.all()
+                msg = 'Invalid age range input.'
+        else:
+            data = Friend.objects.all()
+            msg = 'Please enter a valid age range.'
     else:
         msg = 'search words ...'
         form = FindForm()

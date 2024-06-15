@@ -1,0 +1,10 @@
+idf_component_register(SRCS "src/task.c"
+                            "src/led.c"
+                            "src/toggleSwitch.c"
+                            "src/sevenSegmentLed.c"
+                            "src/pushButton.c"
+                            "src/character.c"
+                            "src/lcd/printLcd.c"
+                            "src/lcd/timerPrint.c"
+                            "src/lcd/lcd.c"
+                    INCLUDE_DIRS ".")
