@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'hello.apps.HelloConfig',
+    'import_export',
+    'hello.apps.HelloConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

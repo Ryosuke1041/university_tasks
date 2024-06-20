@@ -1,14 +1,28 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
 from .models import Friend
-from .forms import HelloForm
+# from .forms import HelloForm
 from .forms import FriendForm
 from .forms import FindForm
+from django.db.models import Count,Sum,Avg,Min,Max
+
 
 def index(request):
     data = Friend.objects.all()
+    re1 = Friend.objects.aggregate(Count('age'))
+    re2 = Friend.objects.aggregate(Sum('age'))
+    re3 = Friend.objects.aggregate(Avg('age'))
+    re4 = Friend.objects.aggregate(Min('age'))
+    re5 = Friend.objects.aggregate(Max('age'))
+
+    msg = 'count: ' + str(re1['age__count']) \
+          + '<br>Sum: ' + str(re2['age__sum']) \
+          + '<br>Avg: ' + str(re3['age__avg']) \
+          + '<br>Min: ' + str(re4['age__min']) \
+          + '<br>Max: ' + str(re5['age__max'])
     params = {
         'title':'Hello',
+        'message': msg,
         'data': data,
     }
     return render(request, 'hello/index.html', params)
@@ -52,23 +66,13 @@ def delete(request, num):
 
 def find(request):
     if request.method == 'POST':
-        msg = 'search result: '
+        msg = request.POST['find']
         form = FindForm(request.POST)
-        str = request.POST['find']
-        data = Friend.objects.filter(name__contains=str)
-        age_range = str.split()
-
-        if len(age_range) == 2:
-            try:
-                min_age = int(age_range[0])
-                max_age = int(age_range[1])
-                data = Friend.objects.filter(age__gte=min_age, age__lt=max_age)
-            except ValueError:
-                data = Friend.objects.all()
-                msg = 'Invalid age range input.'
-        else:
-            data = Friend.objects.all()
-            msg = 'Please enter a valid age range.'
+        sql = 'select * from hello_friend'
+        if msg != '':
+            sql += ' where ' + msg
+        data = Friend.objects.raw(sql)
+        sql = msg
     else:
         msg = 'search words ...'
         form = FindForm()
