@@ -1,35 +1,22 @@
 [
-    {
-      "model": "hello.friend",
-      "pk": 1,
-      "fields": {
-        "name": "産大太郎",
-        "mail": "taro@foo.com",
-        "gender": false,
-        "age": 50,
-        "birthday": "1970-01-01"
-      }
-    },
-    {
-      "model": "hello.friend",
-      "pk": 2,
-      "fields": {
-        "name": "桐蔭次郎",
-        "mail": "jiro@foo.com",
-        "gender": false,
-        "age": 16,
-        "birthday": "2004-01-01"
-      }
-    },
-    {
-      "model": "hello.friend",
-      "pk": 3,
-      "fields": {
-        "name": "産高花子",
-        "mail": "hana@foo.com",
-        "gender": true,
-        "age": 26,
-        "birthday": "1994-10-02"
-      }
+  {
+    "model": "hello.message",
+    "pk": 1,
+    "fields": {
+      "friend": 1,
+      "title": "Test1",
+      "content": "This is test.",
+      "pub_date": "2021-01-07 06:00+0900"
     }
-  ]
+  },
+  {
+    "model": "hello.message",
+    "pk": 2,
+    "fields": {
+      "friend": 3,
+      "title": "テストメッセージ",
+      "content": "これはテストメッセージです。",
+      "pub_date": "2021-01-07 10:00+0900"
+    }
+  }
+]
