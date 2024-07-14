@@ -1,0 +1,22 @@
+[
+    {
+      "model": "hello.message",
+      "pk": 1,
+      "fields": {
+        "friend": 1,
+        "title": "Test1",
+        "content": "This is test.",
+        "pub_date": "2021-01-07 06:00+0900"
+      }
+    },
+    {
+      "model": "hello.message",
+      "pk": 2,
+      "fields": {
+        "friend": 3,
+        "title": "テストメッセージ",
+        "content": "これはテストメッセージです。",
+        "pub_date": "2021-01-07 10:00+0900"
+      }
+    }
+  ]

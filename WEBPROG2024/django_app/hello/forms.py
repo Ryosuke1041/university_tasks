@@ -1,5 +1,4 @@
 from django import forms
-from .models import Friend
 from .models import Friend, Message
 
 class FriendForm(forms.ModelForm):

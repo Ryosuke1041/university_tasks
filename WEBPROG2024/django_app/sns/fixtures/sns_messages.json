@@ -1,0 +1,54 @@
+[
+    {
+        "model": "sns.message",
+        "pk": 1,
+        "fields": {
+            "owner": 3,
+            "group": 1,
+            "content": "初めてのメッセージですわ",
+            "share_id": -1,
+            "good_count": 0,
+            "share_count": 0,
+            "pub_date": "2022-01-12T14:06:17.337Z"
+        }
+    },
+    {
+        "model": "sns.message",
+        "pk": 2,
+        "fields": {
+            "owner": 4,
+            "group": 1,
+            "content": "こんにちは",
+            "share_id": -1,
+            "good_count": 0,
+            "share_count": 0,
+            "pub_date": "2022-01-12T14:07:09.189Z"
+        }
+    },
+    {
+        "model": "sns.message",
+        "pk": 3,
+        "fields": {
+            "owner": 3,
+            "group": 2,
+            "content": "好きな音楽は？",
+            "share_id": -1,
+            "good_count": 0,
+            "share_count": 0,
+            "pub_date": "2022-01-12T14:10:25.466Z"
+        }
+    },
+    {
+        "model": "sns.message",
+        "pk": 4,
+        "fields": {
+            "owner": 3,
+            "group": 1,
+            "content": "メッセージを書き込みます。",
+            "share_id": -1,
+            "good_count": 0,
+            "share_count": 0,
+            "pub_date": "2022-01-12T14:13:43.089Z"
+        }
+    }
+    ]

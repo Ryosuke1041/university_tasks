@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
-from .models import Friend
-# from .forms import HelloForm
 from .models import Friend, Message
+# from .forms import HelloForm
 from .forms import FriendForm, MessageForm
+from .forms import FindForm
 from django.db.models import Count,Sum,Avg,Min,Max
 from django.core.paginator import Paginator
 

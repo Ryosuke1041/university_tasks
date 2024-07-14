@@ -1,0 +1,74 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$YpZFrT8uohGA$gJGFOqgFzCuhUAXq6WmXMl6IP00aX4Srod1Saug+WMw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "public",
+            "first_name": "public",
+            "last_name": "public",
+            "email": "public@foo.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2021-01-13T13:51:09Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$J2KXAJd3qRze$2qv1OKE+zaoWOtVr86bq+gP9XlZZTk5PnwoQFhwwkcs=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "taro",
+            "first_name": "太郎",
+            "last_name": "産大",
+            "email": "taro@foo.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2021-01-13T13:52:19Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$J2KXAJd3qRze$2qv1OKE+zaoWOtVr86bq+gP9XlZZTk5PnwoQFhwwkcs=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "jiro",
+            "first_name": "次郎",
+            "last_name": "桐蔭",
+            "email": "jiro@foo.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2021-01-13T13:52:19Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$J2KXAJd3qRze$2qv1OKE+zaoWOtVr86bq+gP9XlZZTk5PnwoQFhwwkcs=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "hana",
+            "first_name": "花子",
+            "last_name": "産高",
+            "email": "hana@foo.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2021-01-13T13:52:19Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+    ]

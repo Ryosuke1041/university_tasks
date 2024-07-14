@@ -1,0 +1,34 @@
+[
+    {
+        "model": "sns.group",
+        "pk": 1,
+        "fields": {
+            "owner": 2,
+            "title": "public"
+        }
+    },
+    {
+        "model": "sns.group",
+        "pk": 2,
+        "fields": {
+            "owner": 3,
+            "title": "音楽"
+        }
+    },
+    {
+        "model": "sns.group",
+        "pk": 3,
+        "fields": {
+            "owner": 3,
+            "title": "グルメ"
+        }
+    },
+    {
+        "model": "sns.group",
+        "pk": 4,
+        "fields": {
+            "owner": 3,
+            "title": "スポーツ"
+        }
+    }
+    ]

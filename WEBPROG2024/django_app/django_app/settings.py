@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'sns.apps.SnsConfig',
     'hello.apps.HelloConfig',
     'import_export',
     'django.contrib.admin',
